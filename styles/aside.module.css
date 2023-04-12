@@ -1,0 +1,122 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    background-color: #1C1C27;
+}
+
+
+/* .aside:hover {
+    flex: 1;
+    transition: ease-in-out 300ms;
+} */
+
+
+.profile {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px 20px;
+    border-bottom: 1px solid #292837;
+}
+
+.avatarContainer {
+    border-radius: 100px;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #292837;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    background-image: url(../public/retard.jpeg);
+    background-size: 110%;
+    background-position: 40%;
+}
+
+.profiletxt {
+    color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.profiletxt p {
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+}
+
+.name {
+    font-weight: 500;
+}
+
+.profileMain {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.function {
+    color: #f7f7f7c4;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.ctaProfile {
+    border: none;
+    background-color: #009646;
+    border-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90px;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    color: #f7f7f7;
+    cursor: pointer;
+}
+
+.ctaProfile:hover {
+    background-color: #007336;
+    transition: ease-in-out 200ms;
+}
+
+.ctaProfile p {
+    font-weight: 500;
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    margin-bottom: 3px;
+}
+
+.ctaProfile svg {
+    margin-top: 1px;
+}
+
+.mediaWrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    color: #4d4b63;
+    border-top: 1px solid #292837;
+}
+
+.mediaSlot:hover {
+    color: #f7f7f7;
+    transition: ease-in-out 300ms;
+    cursor: pointer;
+}
+
+.resume {
+    height: 100%;
+    width: 100%;
+}

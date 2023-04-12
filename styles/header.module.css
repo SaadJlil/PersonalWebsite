@@ -1,0 +1,91 @@
+.header {
+    height: 100vh;
+    flex: 15;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #23222f;
+    padding: 40px 45px;
+    gap: 40px;
+}
+
+.main {
+    width: 100%;
+    height: 400px;
+    border-radius: 6px;background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1040' height='500' preserveAspectRatio='none' viewBox='0 0 1040 500'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1036%26quot%3b)' fill='none'%3e%3crect width='1040' height='500' x='0' y='0' fill='rgba(28%2c 28%2c 39%2c 1)'%3e%3c/rect%3e%3cpath d='M69 500L569 0L737 0L237 500z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M398.2 500L898.2 0L1073.7 0L573.7 500z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M1034 500L534 0L390 0L890 500z' fill='url(%23SvgjsLinearGradient1038)'%3e%3c/path%3e%3cpath d='M633.8 500L133.79999999999995 0L-125.70000000000005 0L374.29999999999995 500z' fill='url(%23SvgjsLinearGradient1038)'%3e%3c/path%3e%3cpath d='M581.3162335290829 500L1040 41.31623352908292L1040 500z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M0 500L458.6837664709171 500L 0 41.31623352908292z' fill='url(%23SvgjsLinearGradient1038)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1036'%3e%3crect width='1040' height='500' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1037'%3e%3cstop stop-color='rgba(74%2c 74%2c 114%2c 0.25)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(74%2c 74%2c 114%2c 0.25)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1038'%3e%3cstop stop-color='rgba(74%2c 74%2c 114%2c 0.25)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(74%2c 74%2c 114%2c 0.25)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.skillsetWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: #1C1C27;
+    border-radius: 5px;
+    transition: top ease 0.5s;
+}
+
+.skill p {
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    color: #f7f7f7;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.skill .level {
+    font-size: 12px;
+    font-weight: 400;
+    color: #f7f7f7c5;
+}
+
+.skill:hover {
+    margin-top: -15px;
+    cursor: pointer;
+}
+
+.skilltxt {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.mainTxtSide {
+    display: none;
+}
+
+.mainTxtSide h1 {
+    font-weight: 800;
+    font-size: 40px;
+    color: #f7f7f7;
+    font-style: italic;
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    line-height: 35px;
+    width: 300px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.heading span {
+    height: 80px;
+    width: 2px;
+    border: 1px solid #006ae3;
+    color: #006ae3;
+}

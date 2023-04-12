@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.aside {
+    flex: 4;
+    background-color: #1C1C27;
+}
+
+
+.aside:hover {
+    flex: 1;
+    transition: ease-in-out 300ms;
+}

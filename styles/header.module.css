@@ -1,5 +1,4 @@
 .header {
-    height: 100vh;
     flex: 15;
 }
 
@@ -89,3 +88,6 @@
     border: 1px solid #006ae3;
     color: #006ae3;
 }
+
+
+

@@ -1,0 +1,76 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.heading h2 {
+    color: #f7f7f7d7;
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    font-weight: 500;
+}
+
+.slots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slot {
+    display: flex;
+    flex-direction: column;
+    color: #f7f7f7d7;
+    height: 300px;
+    width: 300px;
+    background-color: #1C1C27;
+    border: 1px solid #f7f7f729;
+    border-radius: 5px;
+}
+
+.slotTitle {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.slotTitle h3 {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+}
+
+.slotfade{
+    display: none;
+    transition: 1s ease-in-out;
+}
+
+.slot:hover .slotfade{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slotText {
+    padding: 10px;
+    padding-inline: 20px;
+}
+
+.slotText p {
+    text-align: center;
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    font-size: 16px;
+    line-height: 20px;
+    color: #f7f7f7b9;
+}
+
+.slotUtils {
+    padding: 10px;
+    background-color: #161620; 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

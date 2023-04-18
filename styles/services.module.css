@@ -19,22 +19,28 @@
 }
 
 .slot {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #f7f7f7d7;
     height: 300px;
     width: 300px;
+    background-size: cover;
+    background-position: center;
     background-color: #1C1C27;
     border: 1px solid #f7f7f729;
     border-radius: 5px;
 }
 
+.slot img{
+    position: absolute;
+    z-index: 0;
+}
+
 .slotTitle {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
-    padding-top: 60px;
-    padding-bottom: 30px;
 }
 
 .slotTitle h3 {
@@ -46,6 +52,7 @@
 .slotfade{
     display: none;
     transition: 1s ease-in-out;
+    z-index: 1;
 }
 
 .slot:hover .slotfade{
@@ -53,6 +60,9 @@
     flex-direction: column;
 }
 
+.slot:hover img{
+    filter: brightness(35%);
+}
 
 .slotText {
     padding: 10px;

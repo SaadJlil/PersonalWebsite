@@ -21,8 +21,6 @@
 .slot {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: #f7f7f7d7;
     height: 300px;
     width: 300px;
@@ -33,8 +31,17 @@
     border-radius: 5px;
 }
 
+.slot:hover{
+    border: 1px groove #f7f7f716;
+    border-radius: 10px;
+    transition: 0.3s ease-out;
+}
+
 .slot img{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 0;
 }
 
@@ -44,24 +51,30 @@
 }
 
 .slotTitle h3 {
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 600;
     font-family: 'Barlow Semi Condensed', sans-serif !important;
 }
 
-.slotfade{
-    display: none;
-    transition: 1s ease-in-out;
+
+.slot:hover img{
+    filter: brightness(30%);
+    transition: 0.3s ease-in-out;
+}
+
+.slotfade {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -23%);
+    opacity: 0;
     z-index: 1;
 }
 
-.slot:hover .slotfade{
-    display: flex;
-    flex-direction: column;
-}
+.slot:hover .slotfade {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
 
-.slot:hover img{
-    filter: brightness(35%);
 }
 
 .slotText {
@@ -73,8 +86,10 @@
     text-align: center;
     font-family: 'Barlow Semi Condensed', sans-serif !important;
     font-size: 16px;
-    line-height: 20px;
+    font-weight: 500;
+    line-height: 24px;
     color: #f7f7f7b9;
+    margin: 5px 0;
 }
 
 .slotUtils {

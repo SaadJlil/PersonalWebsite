@@ -12,7 +12,7 @@ export default function Services() {
             <div className={styles.slots}>
                 {services.map(service => (
                     <div key={service.id} className={styles.slot} style={{backgroundImage: `url(${service.img})`}}>
-                        <Image src={service.img} height={200} width={200}/>
+                        <Image src={service.img} height={service.height} width={service.width}/>
                         <div className={styles.slotfade}>
                             <div className={styles.slotTitle}>
                                 <h3>{service.name}</h3>

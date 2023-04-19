@@ -2,6 +2,8 @@ import styles from '../styles/services.module.css'
 import Image from "next/image"
 import useServiceStore from "@/store/serviceStore"
 
+import Button_ from "./button_"
+
 export default function Services() {
     const services = useServiceStore((state) => state.services)
     return(
@@ -24,6 +26,10 @@ export default function Services() {
                    </div>
                 ))}
             </div>
+            <div className={styles.hire}>
+                <Button_ link="#" content="hire me" /> 
+            </div>
+
         </section>
     )
 }

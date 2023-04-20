@@ -1,6 +1,7 @@
 import Header from "../header/header"
 import styles from '../../styles/main.module.css'
 import Aside from "../aside/aside"
+import Modalform from "../modalform/modalform"
 import Projects from "../projects"
 
 export default function Main() {
@@ -8,6 +9,7 @@ export default function Main() {
         <main className={styles.main}>
             <Aside></Aside>
             <Header></Header>
+            <Modalform></Modalform>
         </main>
     )
 }

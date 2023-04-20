@@ -14,33 +14,20 @@ export default function Modalform() {
 function Modal() {
     return (
         <div className={styles.modalFormFull}>
-            <div className={styles.modalWin}>
-                <h2>Hiring Form</h2>
-                <h3>Name</h3>
-                <input className={styles.inputform} type="text" />
-                <h3>Organisation</h3>
-                <input className={styles.inputform} type="text" />
-                <h3>Services you want me to be involved in</h3>
-                <input className={styles.inputform} type="text" />
-                <h3>Message</h3>
-                <input className={styles.inputform} type="text" />
+            <div className={styles.modalContainer}>
+                <div className={styles.modalWin}>
 
+                    <h2>Hiring Form</h2>
+                    <label>Name</label>
+                    <textarea className={styles.inputform} type="text" />
+                    <label>Organisation</label>
+                    <input className={styles.inputform} type="text" />
+                    <label>Services you want me to be involved in</label>
+                    <input className={styles.inputform} type="text" />
+                    <label>Message</label>
+                    <input className={styles.inputform} type="text" />
 
-
-
-                <h3>Services you want me to be involved in</h3>
-                <input className={styles.inputform} type="text" />
-                <h3>Message</h3>
-                <input className={styles.inputform} type="text" />
-
-
-                <h3>Services you want me to be involved in</h3>
-                <input className={styles.inputform} type="text" />
-                <h3>Message</h3>
-                <input className={styles.inputform} type="text" />
-
-
-
+               </div>
             </div>
         </div>
     )

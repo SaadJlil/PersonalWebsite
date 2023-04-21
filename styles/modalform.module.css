@@ -5,8 +5,8 @@
 
 .modalContainer {
     position: absolute;
-    height: 70%;
-    width: 70%;
+    height: 80%;
+    width: 47%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -19,11 +19,21 @@
 }
 
 .modalWin {
-    display: flex;
-    flex-direction: column;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 95%;
   width: 98%;
   overflow-y: auto;
+
+}
+
+.modalWinForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-bottom: 20px;
 
 }
 
@@ -47,21 +57,28 @@
     text-align: center;
 }
 
-.modalWin label{
+.modalWinForm label{
     padding-bottom: 6px;
-    margin-left: 5%;
     
 }
 
-.modalWin .inputform {
-  width: 70%;
-  margin-left: 5%;
+.modalWinForm .inputform {
   background-color: #1e2634;
   border-radius: 5px;
   fill: none;
   border: 1px solid #364250;
   height: 36px;
-  padding: 3px 10px;
+  padding: 5px 10px !important;
   color: #f7faffd2;
   margin-bottom: 30px;
+}
+
+.modalWinForm .ButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.modalWinForm textarea {
+  height: 120px !important;
 }

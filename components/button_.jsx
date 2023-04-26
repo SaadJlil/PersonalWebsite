@@ -3,9 +3,8 @@ import Image from 'next/image'
 
 
 
-export default function Button_(props) {
-    const {content, link} = props
+export default function Button_({content, link, clicked}) {
     return (
-        <a className={styles.cta} href={link}>{content}</a>
+        <button className={styles.cta} href={link} onClick={() => clicked()}>{content}</button>
     )
 }

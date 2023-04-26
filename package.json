@@ -11,7 +11,9 @@
   "dependencies": {
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
+    "latest-version": "^7.0.0",
+    "next": "^13.3.1",
+    "npx": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",

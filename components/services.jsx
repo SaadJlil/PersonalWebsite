@@ -4,7 +4,7 @@ import useServiceStore from "@/store/serviceStore"
 
 import Button_ from "./button_"
 
-export default function Services() {
+export default function Services({handleModalOpen}) {
     const services = useServiceStore((state) => state.services)
     return(
         <section className={styles.services} style={{backgroundImage: `url(/home/whoami/Desktop/FrontEnd/PersonalWebsite/public/smartphone-heart-svgrepo-com.svg)`}} >
@@ -27,8 +27,9 @@ export default function Services() {
                 ))}
             </div>
             <div className={styles.hire}>
-                <Button_ link="#" content="hire me" /> 
+                <Button_ link="#" content="hire me" clicked={() => handleModalOpen()}/> 
             </div>
+
 
         </section>
     )

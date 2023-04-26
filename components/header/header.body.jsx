@@ -16,13 +16,13 @@ import postgres from '../../public/postgres.svg'
 import Projects from '../projects';
 import Services from '../services';
 
-export default function HeaderBody() {
+export default function HeaderBody({handleModalOpenBody}) {
     return (
         <div className={styles.headerContent}>
             <HeaderMain/>
             <Projects/>
             <Skillset/>
-            <Services/>
+            <Services handleModalOpen={() => handleModalOpenBody()}/>
         </div>
     )
 }

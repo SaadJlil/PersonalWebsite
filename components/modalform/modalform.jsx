@@ -1,18 +1,25 @@
+import React, { useState } from 'react';
 import styles from '../../styles/modalform.module.css'
 import Button_ from '../button_' 
 import Image from "next/image"
 
-export default function Modalform() {
+export default function Modalform({handleCloseModal, isModalOpen}) {
+
+    
+
     return (
         <modalform className={styles.modalform}>        
-            <Modal />
+            <Modal isOpen={isModalOpen} onClose={() => handleCloseModal()}/>
         </modalform>
 
     )
 }
 
 
-function Modal() {
+function Modal({isOpen, onClose}) {
+
+    if(!isOpen) return null;
+
     return (
         <div className={styles.modalFormFull}>
             <div className={styles.modalContainer}>
@@ -29,7 +36,7 @@ function Modal() {
                         <label>Message</label>
                         <textarea className={styles.inputform} type="text" />
                         <div className={styles.ButtonWrapper}>
-                            <Button_ className={styles.button_} link="#" content="Submit" /> 
+                            <Button_ className={styles.button_} link="#"  content="Submit" /> 
                         </div>
 
                     </div>

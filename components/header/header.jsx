@@ -3,11 +3,13 @@ import HeaderBody from "./header.body"
 import styles from '../../styles/header.module.css'
 import Projects from "../projects"
 
-export default function Header() {
+export default function Header({handleModalOpenHeader}) {
+    
+    
     return (
         <header className={styles.header}>   
             <HeaderMenu/>
-            <HeaderBody/>
+            <HeaderBody handleModalOpenBody={() => handleModalOpenHeader()}/>
         </header>
     )
 }

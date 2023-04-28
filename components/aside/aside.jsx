@@ -1,14 +1,35 @@
+import useServiceStore from '@/store/serviceStore'
 import styles from '../../styles/aside.module.css'
 import { MdDownload } from 'react-icons/md'
 import { SiUpwork, SiLinkedin, SiGithub, SiGmail } from 'react-icons/si'
+import useStoreAsideElements from '@/store/asidestoredelements'
+import React from 'react'
 
 export default function Aside() {
     return (
         <aside className={styles.aside}>
             <Profile />
-            <Resume />
+            <AsideElements />
             <Medias />
         </aside>
+    )
+}
+
+function AsideElements() {
+    const StoredAsideElements = useStoreAsideElements((state) => state.elements)
+    return (
+        <div className={styles.asideelements}>
+            {StoredAsideElements.map(service => (
+                        <div key={service.id} className={styles.asideelement}>
+                            <h2>{service.name}</h2>
+                            <h3 className={styles.date}>{service.date}</h3>
+                            <h3 className={styles.description}>{service.description}</h3>
+
+                        </div>
+                    )
+                )
+            }        
+        </div>
     )
 }
 

@@ -1,6 +1,8 @@
 .modalFormFull {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(3px);
+background-image: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.238));
 }
 
 .modalContainer {
@@ -14,8 +16,9 @@
     align-items: center;
     justify-content: center;
     background-color: #23222f;
-    border: 1px solid white;
+    border: 1px groove #43405763;
     border-radius: 20px;
+    box-shadow: -4px -3px 25px 11px rgba(0, 0, 0, 0.218);
 }
 
 .modalWin {
@@ -71,6 +74,7 @@
 }
 
 .modalWinForm .ButtonWrapper {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }

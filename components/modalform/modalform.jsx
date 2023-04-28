@@ -24,9 +24,15 @@ function Modal({isOpen, onClose}) {
         <div className={styles.modalFormFull}>
             <div className={styles.modalContainer}>
                 <div className={styles.modalWin}>
-                        <h2>Hiring Form</h2>
+                        <span className={styles.close} onClick={() => onClose()}>
+                            &times;
+                        </span> 
+
+                    <h2>Hiring Form</h2>
+
                     <div className={styles.modalWinForm}>
 
+                        
                         <label>Name</label>
                         <input className={styles.inputform} type="text" />
                         <label>Organisation</label>

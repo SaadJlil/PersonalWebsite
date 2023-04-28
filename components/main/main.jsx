@@ -13,7 +13,7 @@ export default function Main() {
         console.log("thing");
         setIsModalOpen_(true);
     }
-
+    
     const handleCloseModal_ = () => {
         setIsModalOpen_(false);
     }

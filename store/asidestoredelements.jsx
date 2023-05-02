@@ -11,27 +11,21 @@ class AsideStoredElement{
 }
 const MarocTbs = new AsideStoredElement(
     1,
-    "Casa Tour",
-    "1980945509",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
+    "BACHELOR IN MANAGEMENT (General)",
+    "2019 - 2020",
+    'Toulouse Business School (Casablanca, Morocco)',
 )
 const Toulouse = new AsideStoredElement(
     1,
-    "Casa Tour",
-    "1980945509",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
-)
-const Barcelona = new AsideStoredElement(
-    1,
-    "Casa Tour",
-    "1980945509",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
+    "BACHELOR IN MANAGEMENT (3 SEMESTER EXCHANGE) WITH SPECIALIZATION IN DATA ANALYSIS",
+    "2020-2022",
+    'Toulouse Business School (Toulouse , France/Barcelona, Spain)'
 )
 const Canada = new AsideStoredElement(
     1,
-    "Casa Tour",
-    "1980945509",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
+    "GRADUATE DEGREE IN BUSINESS ANALYTICS",
+    "Enrolled",
+    'Niagara College (Niagara On-The-Lake,Canada)'
 )
 
 
@@ -40,7 +34,6 @@ const useStoreAsideElements = create((set) => ({
     elements:  [
         MarocTbs,
         Toulouse,
-        Barcelona,
         Canada
     ],
 }))

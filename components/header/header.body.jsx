@@ -3,7 +3,8 @@ import Image from 'next/image'
 import {create} from 'zustand';
 import { useState } from 'react';
 
-
+import arrow_right from '../../public/arrow_right.svg'
+import arrow_left from '../../public/arrow_left.svg'
 import react from '../../public/react.svg'
 import csharp from '../../public/cs.svg'
 import dotnet from '../../public/dotnet.svg'
@@ -32,9 +33,19 @@ function HeaderMain() {
         <main className={styles.main}>
             <div className={styles.mainTxtSide}>
                 <div className={styles.heading}>
-                    <span />
                     <h1>Your software solution architect</h1>
                 </div>
+                <div className={styles.intro}>
+                    <h3>Welcome to my personal website! My name is Saad, I'm a business analytics student and web developer originally from Morocco, currently based in Canada. I have a passion for coding and enjoy spending my free time playing chess. </h3> 
+
+                    <h3>On this website, you'll find information about me, my interests, and my professional background.  
+                        you're a prospective employer, a fellow developer, or just curious about who I am, I invite you to take a look around and get to know me better.
+                    </h3>
+                    <h3>
+                        Thank you for visiting, and I hope you enjoy exploring my site!
+                    </h3>
+                </div>
+
             </div>
             <div></div>
         </main>
@@ -59,16 +70,16 @@ const useCounter = create((set) => ({
 
      const skills = [
          { id:1, name: 'Javascript', icon: javascript, level:'confirmed' },
-         { id:2, name: 'typescript', icon: typescript, level:'confirmed' },
-         { id:3, name: 'python', icon: python, level:'advanced'  },
-         { id:4, name: 'pytorch', icon: pytorch, level:'learning' },
-         { id:5, name: 'postgresql', icon: postgres, level:'confirmed' },
-         { id:6, name: 'csharp', icon: csharp, level:'confirmed' },
-         { id:7, name: 'dotnet', icon: dotnet, level:'advanced' },
-         { id:8, name: 'react', icon: react, level:'confirmed' }
+         { id:2, name: 'Typescript', icon: typescript, level:'confirmed' },
+         { id:3, name: 'Python', icon: python, level:'advanced'  },
+         { id:4, name: 'Pytorch', icon: pytorch, level:'learning' },
+         { id:5, name: 'Postgresql', icon: postgres, level:'confirmed' },
+         { id:6, name: 'Csharp', icon: csharp, level:'confirmed' },
+         { id:7, name: 'Dotnet', icon: dotnet, level:'advanced' },
+         { id:8, name: 'React', icon: react, level:'confirmed' }
      ]
 
-     let offset = 2;
+     let offset = 4;
 
      const SlideForward = () => {
          setN1(n1 + offset > skills.length ? n1 + offset - skills.length : n1 + offset);
@@ -86,7 +97,14 @@ const useCounter = create((set) => ({
 
      return (
          <div className={styles.skillsetWrapper}>
-             <button onClick={() => SlideForward()}>{count}</button>
+            <Image
+                className={`${styles.arrowleft} ${styles.arrow}`}
+                src={arrow_left}
+                width={20}
+                height={20}
+                alt="thing"
+                onClick={() => SlideBackward()}
+             />
              {skills.filter(skill => (n1 < n2) ? skill.id < n2 && skill.id >= n1 : skill.id < n2 || skill.id >= n1)
 
                  .sort((a, b) => {
@@ -118,6 +136,14 @@ const useCounter = create((set) => ({
                      </div>
                  </div>
              ))}
+             <Image
+                className={`${styles.arrowright} ${styles.arrow}`}
+                src={arrow_right}
+                width={20}
+                height={20}
+                alt="thing"
+                onClick={() => SlideForward()}
+             />
          </div>
      )
  }

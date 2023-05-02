@@ -46,7 +46,7 @@ function Profile() {
                     <p className={styles.function}>software developer</p>
                 </div>
                 <button className={styles.ctaProfile}>
-                    <MdDownload />
+                    <MdDownload className={styles.downloads}/>
                     <p>get resume</p>
                 </button>
             </div>

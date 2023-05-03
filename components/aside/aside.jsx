@@ -59,16 +59,16 @@ function Medias() {
     return (
         <div className={styles.mediaWrapper}>
             <div className={styles.mediaSlot}>
-                <SiGithub />
+                <SiGithub  size="60%"/>
             </div>
             <div className={styles.mediaSlot}>
-                <SiLinkedin />
+                <SiLinkedin size="60%"/>
             </div>
             <div className={styles.mediaSlot}>
-                <SiGmail/>
+                <SiGmail size="60%"/>
             </div>
             <div className={styles.mediaSlot}>
-                <SiUpwork />
+                <SiUpwork size="60%"/>
             </div>
         </div>
     )

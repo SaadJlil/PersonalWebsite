@@ -7,6 +7,8 @@ import chemistry from '../public/projects/chemistry.png'
 import react from '../public/react.svg'
 import dotnet from '../public/dotnet.svg'
 import postgres from '../public/postgres.svg'
+import python from '../public/python.svg'
+import pytorch from '../public/pytorch.svg'
 
     class Technology {
         constructor(id, name, icon) {
@@ -37,6 +39,18 @@ import postgres from '../public/postgres.svg'
 
     )
 
+    const Python = new Technology(
+        3,
+        "Python",
+        python,
+    )  
+
+    const Pytorch = new Technology(
+        3,
+        "Pytorch",
+        pytorch,
+    )
+
     class Project {
         constructor(id, name, description, github, technologies, img){
             this.id = id;
@@ -51,28 +65,28 @@ import postgres from '../public/postgres.svg'
 
     const casaTour = new Project(
         1,
-        "Casa Tour",
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
-        'github.com/saadjlil/casatour',
+        "Cephiro",
+        'Open source monolithic backend online marketplace for short-term homestay',
+        'https://github.com/SaadJlil/Cephiro',
         [reactjs, msdotnet, postgresql],
         casatour,
     )
 
     const chemistery = new Project(
         2,
-        "Chemistery",
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
-        'github.com/saadjlil/chemistery',
-        [reactjs, msdotnet, postgresql],
+        "Authentication microservice",
+        'Empower your website with a personalized microservice using .NET and PostgreSQL',
+        'https://github.com/SaadJlil/Username-based-authentication-microservice',
+        [msdotnet, postgresql],
         chemistry,
     )
 
     const agoradex = new Project(
         3,
-        "AgoraDEX",
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
-        'github.com/saadjlil/agoradex',
-        [reactjs, msdotnet, postgresql],
+        "Calib Challenge",
+        'Created accurate direction-of-travel predictions for dashcam videos using PyTorch and deep learning, achieving high accuracy on both labeled and unlabeled videos with 910-pixel focal length.',
+        'https://github.com/SaadJlil/calib_challenge',
+        [Python, Pytorch],
         agoradexed,
     )
 

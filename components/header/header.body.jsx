@@ -33,17 +33,10 @@ function HeaderMain() {
         <main className={styles.main}>
             <div className={styles.mainTxtSide}>
                 <div className={styles.heading}>
-                    <h1>Your software solution architect</h1>
+                    <h1>Your software solution <br /> <span>Architect</span></h1>
                 </div>
                 <div className={styles.intro}>
-                    <h3>Welcome to my personal website! My name is Saad, I'm a business analytics student and web developer originally from Morocco, currently based in Canada. I have a passion for coding and enjoy spending my free time playing chess. </h3> 
-
-                    <h3>On this website, you'll find information about me, my interests, and my professional background.  <br />
-                        If you're a prospective employer, a fellow developer, or just curious about who I am, I invite you to take a look around and get to know me better.
-                    </h3>
-                    <h3>
-                        Thank you for visiting, and I hope you enjoy exploring my site!
-                    </h3>
+                    <h3>Welcome to my personal website! My name is Saad, I'm a business analytics student and web developer (Mostly Backend) originally from Morocco, currently based in Canada. I have a passion for coding and enjoy spending my free time playing chess. </h3> 
                 </div>
 
             </div>
@@ -98,7 +91,7 @@ const useCounter = create((set) => ({
      return (
          <div className={styles.skillsetWrapper}>
             <div className={styles.heading}>
-                <h2>My Portfolio of Projects</h2>
+                <h2>Technologies Protfolio</h2>
             </div>
             <div className={styles.skills}>
                 <Image
@@ -106,8 +99,8 @@ const useCounter = create((set) => ({
                     src={arrow_left}
                     width={20}
                     height={20}
-                    alt="thing"
-                    onClick={() => SlideBackward()}
+                    alt= "Left arrow"
+                   onClick={() => SlideBackward()}
                 />
                 {skills.filter(skill => (n1 < n2) ? skill.id < n2 && skill.id >= n1 : skill.id < n2 || skill.id >= n1)
 
@@ -145,7 +138,7 @@ const useCounter = create((set) => ({
                     src={arrow_right}
                     width={20}
                     height={20}
-                    alt="thing"
+                    alt="Right arrow"
                     onClick={() => SlideForward()}
                 />
             </div>

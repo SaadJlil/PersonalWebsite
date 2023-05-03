@@ -29,8 +29,10 @@ export default function Projects() {
                         </div>
                         <div className={styles.slotUtils}>
                             <div className={styles.slotUtil}>
-                                <label className={styles.label}>github: </label>
-                                <p className={styles.labelText}>{project.github}</p>
+                                <span>
+                                    <label className={styles.label}>github: </label>
+                                    <a className={styles.labelText}>{project.github}</a>
+                                </span>
                             </div>
                             <div className={styles.technos}>
                                 <label className={styles.label}>stack:</label>

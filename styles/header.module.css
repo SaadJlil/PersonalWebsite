@@ -10,12 +10,13 @@
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    background-color: #23222f;
+    background-image: linear-gradient(90deg,#21253592,#303650ba);
     padding: 40px 45px;
-    gap: calc(60px + 4vh);
+    gap: 25vh;
 }
 
 .main {
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;

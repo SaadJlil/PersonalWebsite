@@ -12,7 +12,7 @@
     overflow-x: hidden;
     background-color: #23222f;
     padding: 40px 45px;
-    gap: 40px;
+    gap: calc(60px + 4vh);
 }
 
 .main {
@@ -25,12 +25,31 @@
 
 .skillsetWrapper {
     display: flex;
+    flex-direction: column;
+    gap: calc(10px + 1vh);
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 17vh; 
+
+}
+
+.skillsetWrapper .heading h2{
+    color: #f7f7f7d7;
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    font-weight: 600;
+    font-size: 35px !important;
+
+}
+
+.skills{
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 70%;
-    height: 15vh; 
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -83,8 +102,8 @@
 
 .mainTxtSide h1 {
     font-weight: 800;
-    color: rgb(216, 225, 235);
-    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.787);
+    font-size: 2.5rem;
     font-style: italic;
     font-family: 'Barlow Semi Condensed', sans-serif !important;
     line-height: 35px;

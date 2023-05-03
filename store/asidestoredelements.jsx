@@ -11,19 +11,19 @@ class AsideStoredElement{
 }
 const MarocTbs = new AsideStoredElement(
     1,
-    "BACHELOR IN MANAGEMENT (General)",
+    "Bachelor in management (General)",
     "2019 - 2020",
     'Toulouse Business School (Casablanca, Morocco)',
 )
 const Toulouse = new AsideStoredElement(
     1,
-    "BACHELOR IN MANAGEMENT (3 SEMESTER EXCHANGE) WITH SPECIALIZATION IN DATA ANALYSIS",
+    "Bachelor in mamagement (3 semester exchange) specialisation in data analysis",
     "2020-2022",
     'Toulouse Business School (Toulouse , France/Barcelona, Spain)'
 )
 const Canada = new AsideStoredElement(
     1,
-    "GRADUATE DEGREE IN BUSINESS ANALYTICS",
+    "graduate degree in business analytics",
     "Enrolled",
     'Niagara College (Niagara On-The-Lake,Canada)'
 )

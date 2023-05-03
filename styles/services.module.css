@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: calc(11px + 4vh);
+    margin-bottom: 4vh;
 }
 
 .heading h2 {

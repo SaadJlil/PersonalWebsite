@@ -38,8 +38,8 @@ function HeaderMain() {
                 <div className={styles.intro}>
                     <h3>Welcome to my personal website! My name is Saad, I'm a business analytics student and web developer originally from Morocco, currently based in Canada. I have a passion for coding and enjoy spending my free time playing chess. </h3> 
 
-                    <h3>On this website, you'll find information about me, my interests, and my professional background.  
-                        you're a prospective employer, a fellow developer, or just curious about who I am, I invite you to take a look around and get to know me better.
+                    <h3>On this website, you'll find information about me, my interests, and my professional background.  <br />
+                        If you're a prospective employer, a fellow developer, or just curious about who I am, I invite you to take a look around and get to know me better.
                     </h3>
                     <h3>
                         Thank you for visiting, and I hope you enjoy exploring my site!
@@ -79,7 +79,7 @@ const useCounter = create((set) => ({
          { id:8, name: 'React', icon: react, level:'confirmed' }
      ]
 
-     let offset = 4;
+     let offset =  4;
 
      const SlideForward = () => {
          setN1(n1 + offset > skills.length ? n1 + offset - skills.length : n1 + offset);
@@ -97,53 +97,58 @@ const useCounter = create((set) => ({
 
      return (
          <div className={styles.skillsetWrapper}>
-            <Image
-                className={`${styles.arrowleft} ${styles.arrow}`}
-                src={arrow_left}
-                width={20}
-                height={20}
-                alt="thing"
-                onClick={() => SlideBackward()}
-             />
-             {skills.filter(skill => (n1 < n2) ? skill.id < n2 && skill.id >= n1 : skill.id < n2 || skill.id >= n1)
+            <div className={styles.heading}>
+                <h2>My Portfolio of Projects</h2>
+            </div>
+            <div className={styles.skills}>
+                <Image
+                    className={`${styles.arrowleft} ${styles.arrow}`}
+                    src={arrow_left}
+                    width={20}
+                    height={20}
+                    alt="thing"
+                    onClick={() => SlideBackward()}
+                />
+                {skills.filter(skill => (n1 < n2) ? skill.id < n2 && skill.id >= n1 : skill.id < n2 || skill.id >= n1)
 
-                 .sort((a, b) => {
-                     if( a - n1 < 0 ){
-                         if( b - n1 < 0 ){
-                             return (a < b);
-                         }
-                         return -1;
-                     }
-                     else{
-                         if( b - n1 < 0 ){
-                             return 1
-                         }
-                         return (a < b);
-                     }
-                 })
-                 .map(skill => (
-                 <div key={skill.id} className={styles.skill}>
-                     <Image
-                         className={styles.techIcon}
-                         src={skill.icon}
-                         width={20}
-                         height={20}
-                         alt={skill.name}
-                     />
-                     <div className={styles.skilltxt}>
-                         <p className={styles.name}>{skill.name}</p>
-                         <p className={styles.level}>{skill.level}</p>
-                     </div>
-                 </div>
-             ))}
-             <Image
-                className={`${styles.arrowright} ${styles.arrow}`}
-                src={arrow_right}
-                width={20}
-                height={20}
-                alt="thing"
-                onClick={() => SlideForward()}
-             />
-         </div>
+                    .sort((a, b) => {
+                        if( a - n1 < 0 ){
+                            if( b - n1 < 0 ){
+                                return (a < b);
+                            }
+                            return -1;
+                        }
+                        else{
+                            if( b - n1 < 0 ){
+                                return 1
+                            }
+                            return (a < b);
+                        }
+                    })
+                    .map(skill => (
+                    <div key={skill.id} className={styles.skill}>
+                        <Image
+                            className={styles.techIcon}
+                            src={skill.icon}
+                            width={20}
+                            height={20}
+                            alt={skill.name}
+                        />
+                        <div className={styles.skilltxt}>
+                            <p className={styles.name}>{skill.name}</p>
+                            <p className={styles.level}>{skill.level}</p>
+                        </div>
+                    </div>
+                ))}
+                <Image
+                    className={`${styles.arrowright} ${styles.arrow}`}
+                    src={arrow_right}
+                    width={20}
+                    height={20}
+                    alt="thing"
+                    onClick={() => SlideForward()}
+                />
+            </div>
+        </div>
      )
  }

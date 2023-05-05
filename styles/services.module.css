@@ -8,7 +8,7 @@
 }
 
 .heading h2 {
-    color: #f7f7f7d7;
+    color: hwb(120 78% 10% / 0.95);
     font-family:"Space Grotesk,sans-serif" !important; 
     font-weight: 600;
     font-size: 35px;

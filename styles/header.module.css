@@ -10,71 +10,221 @@
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    background-image: linear-gradient(90deg,#21253592,#303650ba);
-    padding: 40px 45px;
+    background-image: linear-gradient(90deg,#1b1e2b92,#2e3d307b);
+    padding: 0 45px;
     gap: 25vh;
 }
 
 .main {
-    margin-top: 5vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
-    height: 400px;
+    height: 100vh;
     border-radius: 6px;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1040' height='500' preserveAspectRatio='none' viewBox='0 0 1040 500'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1036%26quot%3b)' fill='none'%3e%3crect width='1040' height='500' x='0' y='0' fill='rgba(28%2c 28%2c 39%2c 1)'%3e%3c/rect%3e%3cpath d='M69 500L569 0L737 0L237 500z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M398.2 500L898.2 0L1073.7 0L573.7 500z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M1034 500L534 0L390 0L890 500z' fill='url(%23SvgjsLinearGradient1038)'%3e%3c/path%3e%3cpath d='M633.8 500L133.79999999999995 0L-125.70000000000005 0L374.29999999999995 500z' fill='url(%23SvgjsLinearGradient1038)'%3e%3c/path%3e%3cpath d='M581.3162335290829 500L1040 41.31623352908292L1040 500z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M0 500L458.6837664709171 500L 0 41.31623352908292z' fill='url(%23SvgjsLinearGradient1038)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1036'%3e%3crect width='1040' height='500' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1037'%3e%3cstop stop-color='rgba(74%2c 74%2c 114%2c 0.25)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(74%2c 74%2c 114%2c 0.25)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1038'%3e%3cstop stop-color='rgba(74%2c 74%2c 114%2c 0.25)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(74%2c 74%2c 114%2c 0.25)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
     overflow: hidden;
+
+}
+
+.hireme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    padding: 3px 0;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+	color: white;
+    border: 2px solid #009646;
+	font-size: 1.5rem;
+    background-color: #009646af;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hireme:hover{
+	background-color: transparent;
+	transition: 0.3s ease;
+}
+
+.main .animation {
+    width: 40%;
+    height: 100%;
+}
+
+.main .animation img{
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 100%;
 }
 
 .skillsetWrapper {
     display: flex;
     flex-direction: column;
-    gap: calc(10px + 1vh);
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    height: 17vh; 
+    gap: calc(15px + 1vh);
+    width: 100%;
+    padding: 0 3%;
+}
+
+@media (max-width: 1758px) {
+    .skillsetWrapper {
+        padding: 0 0;
+    }
 
 }
 
+.skillsWrapper {
+    width: 100%;
+    position: relative;
+    left: 2%;
+}
+
+.skillsetWrapper .heading {
+    width: 100%;
+}
+
+.skillsetWrapper .heading h2{
+    color: hwb(120 78% 10% / 0.95);
+    font-family:"Space Grotesk,sans-serif" !important; 
+    font-weight: 600;
+    font-size: 35px !important;
+    margin-bottom: 30px;
+
+}
+
+.mainTxtSide {
+    width: 55%;
+    padding: 2% 2%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7%;
+
+}
+
+.saad {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mainTxtSide .heading .saad .name {
+    font-weight: 800;
+    background-image: linear-gradient(25deg,rgb(201, 220, 240),#9ac8d0);
+    color: transparent;
+    font-size: 4rem;
+    font-style: italic;
+    font-family: "Space Grotesk,sans-serif" !important;
+}
+
+.mainTxtSide .heading .saad .work {
+    font-weight: 900;
+    background-image: linear-gradient(25deg,rgba(201, 220, 240, 0.774),#9ad0a0c1);
+    color: transparent;
+    font-size: 3.5rem;
+    font-style: italic;
+    font-family: "Space Grotesk,sans-serif" !important;
+}
+
+.mainTxtSide .heading .saad p {
+    font-weight: 300;
+    word-spacing: 4px;
+    color: rgba(225, 240, 255, 0.787);
+    font-size: 1rem;
+    font-style: italic;
+    font-family: "Space Grotesk,sans-serif" !important;
+}
+
+.main .heading .presentation {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.787);
+    font-size: 19px;
+    font-style: italic;
+    font-family: "Space Grotesk,sans-serif" !important;
+    width: 100%;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+
 .main .heading {
-    text-align: center;
-    width: 80%;
+    width: 100%;
     height: 70%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 5%;
+    padding-left: 5%;
+    gap: 20%;
+    
 }
 
 .main .heading span {
-
+    font-size: 4rem;
     -webkit-background-clip: text;
-    background-image: linear-gradient(25deg,#2600fc,#35ee31);
     color: transparent;
     line-height: 1.1;
 }
 
 
-.skillsetWrapper .heading h2{
-    text-align: center;
+
+
+.technical {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 3%;
+}
+
+.skillsWrapper {
+}
+
+.skillsWrapper .Title {
+    width: 20%;
+}
+
+.technical h2 {
     color: #f7f7f7d7;
     font-family:"Space Grotesk,sans-serif" !important; 
-    font-weight: 600;
-    font-size: 35px !important;
+    font-weight: 500;
+    font-size: 30px !important;
+    width: 100%;
+}
 
+.Others {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 3%;
+}
+
+.Others h2 {
+    color: #f7f7f7d7;
+    font-family:"Space Grotesk,sans-serif" !important; 
+    font-weight: 500;
+    font-size: 30px !important;
 }
 
 .skills{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 130px;
 }
 
 
@@ -114,38 +264,6 @@
     display: flex;
     flex-direction: column;
     gap: 1px;
-}
-
-.mainTxtSide {
-    
-    height: 100%;
-    width: 100%;
-    padding: 3% 7%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 7%;
-}
-
-
-
-.mainTxtSide .heading h1 {
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.787);
-    font-size: 6rem;
-    font-style: italic;
-    font-family: "Space Grotesk,sans-serif" !important;
-}
-
-.mainTxtSide .heading h2 {
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.787);
-    font-size: 3rem;
-    font-style: italic;
-    font-family: 'Barlow Semi Condensed', sans-serif !important;
-    line-height: 35px;
-    width: 70%;
 }
 
 .techIcon {

@@ -2,22 +2,39 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: calc(11px + 4vh);
 }
 
+.heading {
+    display: flex;
+
+}
+
 .heading h2 {
-    color: #f7f7f7d7;
+    color: hwb(120 78% 10% / 0.95);
     font-family: "Space Grotesk,sans-serif" !important;    
     font-weight: 600;
     font-size: 35px;
+}
+
+@media (max-width: 1210px) {
+    .heading {
+        width: 100%;
+        justify-content: center;
+    }
+
+    
+
+    .slots {
+        justify-content: center;
+    }
+    
 }
 
 .slots {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     flex-basis: 3;
     gap: 20px;
 }
@@ -38,7 +55,7 @@
 }
 
 .imgWrap {
-    width: 400px;
+     width: 400px;
     height: 200px;
 }
 

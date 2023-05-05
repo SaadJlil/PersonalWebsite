@@ -26,11 +26,6 @@ export default function Services({handleModalOpen}) {
                    </div>
                 ))}
             </div>
-            <div className={styles.hire}>
-                <Button_ link="#" content="Hire Me" clicked={() => handleModalOpen()}/> 
-            </div>
-
-
         </section>
     )
 }

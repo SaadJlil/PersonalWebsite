@@ -26,6 +26,11 @@ export default function Services({handleModalOpen}) {
                    </div>
                 ))}
             </div>
+        <div className={styles.footer}>
+            <div className={styles.slogan}>
+                <p>©2023 Saad JLIL</p>
+            </div>
+        </div>
         </section>
     )
 }

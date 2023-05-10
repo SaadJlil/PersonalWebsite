@@ -24,6 +24,7 @@ export default function Main() {
             <Header handleOpenModalHeader={() => handleOpenModal_()}></Header>
             
             <Modalform handleCloseModal={() => handleCloseModal_()} isModalOpen={isModalOpen_}></Modalform>
+
         </main>
     )
 }

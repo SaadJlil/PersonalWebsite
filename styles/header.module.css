@@ -69,7 +69,7 @@
 .skillsetWrapper {
     display: flex;
     flex-direction: column;
-    gap: calc(15px + 1vh);
+    gap: calc(18px + 2vh);
     width: 100%;
     padding: 0 3%;
 }
@@ -298,3 +298,4 @@
 }
 
 /* (skill.id >= n1) ? skill.id - n1 + 1 : skill.id + skill.length - n1 + 1 */
+

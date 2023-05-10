@@ -10,3 +10,29 @@
 body {
   background-color: #201f2a;
 }
+
+
+
+/* Set the styles for the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+/* Set the thumb style of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+  border-radius: 10px;
+}
+
+/* Set the track style of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+/* Set the corner style of the scrollbar */
+::-webkit-scrollbar-corner {
+  background-color: #f5f5f5;
+}
+
+

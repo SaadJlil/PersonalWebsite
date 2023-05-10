@@ -29,6 +29,9 @@ export default function HeaderBody({handleModalOpenBody}) {
     )
 }
 
+
+
+
 function HeaderMain({handleModalOpen}) {
     return (
         <main className={styles.main}>

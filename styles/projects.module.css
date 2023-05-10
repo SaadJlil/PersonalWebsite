@@ -2,12 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: calc(11px + 4vh);
+    gap: calc(14px + 7vh);
 }
 
 .heading {
     display: flex;
-
 }
 
 .heading h2 {

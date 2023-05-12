@@ -10,7 +10,6 @@ export default function Main() {
     const [isModalOpen_, setIsModalOpen_] = useState(false);
 
     const handleOpenModal_ = () => {
-        console.log("thing");
         setIsModalOpen_(true);
     }
     
@@ -24,6 +23,7 @@ export default function Main() {
             <Header handleOpenModalHeader={() => handleOpenModal_()}></Header>
             
             <Modalform handleCloseModal={() => handleCloseModal_()} isModalOpen={isModalOpen_}></Modalform>
+
 
         </main>
     )

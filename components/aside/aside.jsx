@@ -3,7 +3,8 @@ import styles from '../../styles/aside.module.css'
 import { MdDownload } from 'react-icons/md'
 import { SiUpwork, SiLinkedin, SiGithub, SiGmail } from 'react-icons/si'
 import useStoreAsideElements from '@/store/asidestoredelements'
-import React from 'react'
+import AcademicModal from '../AsideElements/academic'
+import React, {useState} from 'react'
 
 export default function Aside() {
     return (
@@ -17,18 +18,67 @@ export default function Aside() {
 
 function AsideElements() {
     const StoredAsideElements = useStoreAsideElements((state) => state.elements)
+
+    const [isModalOpen_Academic, setIsModalOpen_Academic] = useState(false);
+
+    const [isModalOpen_Work, setIsModalOpen_Work] = useState(false);
+
+    const [isModalOpen_About, setIsModalOpen_About] = useState(false);
+
+    const handleOpenModal_Academic = () => {
+        setIsModalOpen_Academic(true);
+    }
+    
+    const handleCloseModal_Academic = () => {
+        setIsModalOpen_Academic(false);
+    }
+
+    const handleOpenModal_Work = () => {
+        setIsModalOpen_Work(true);
+    }
+    
+    const handleCloseModal_Work = () => {
+        setIsModalOpen_Work(false);
+    }
+
+    const handleOpenModal_About = () => {
+        setIsModalOpen_About(true);
+    }
+    
+    const handleCloseModal_About = () => {
+        setIsModalOpen_About(false);
+    }
+
+
+
     return (
         <div className={styles.asideelements}>
             {StoredAsideElements.map(service => (
                         <div key={service.id} className={styles.asideelement}>
                             <h2>{service.name}</h2>
-                            <h3 className={styles.date}>{service.date}</h3>
-                            <h3 className={styles.description}>{service.description}</h3>
-
                         </div>
                     )
                 )
             }        
+
+            <div className={styles.asideelement}>
+                <h2>Work History</h2>
+            </div>
+
+            <div className={styles.asideelement} onClick={() => handleOpenModal_Academic()}>
+                <h2>Academic History</h2>
+            </div>
+
+            <AcademicModal className={styles.asideelement} handleCloseModal={() => handleCloseModal_Academic()} isModalOpen={isModalOpen_Academic}>
+            </AcademicModal>
+
+
+
+
+            <div className={styles.asideelement}>
+                <h2>About Me</h2>
+            </div>
+
         </div>
     )
 }

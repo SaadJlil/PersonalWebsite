@@ -1,4 +1,4 @@
-.modalFormFull {
+.AcademicFormFull{
     height: 100vh;
     width: 100vw;
     backdrop-filter: blur(3px);
@@ -38,7 +38,6 @@
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin-bottom: 20px;
 
 }
 
@@ -51,40 +50,14 @@
     position: fixed;
 }
 
-.modalWin h2 {
-    padding-top: 5px;
-    padding-bottom: 20px;
+
+
+.modalWin .WinTitle .something{
+    color: hwb(120 55% 32%);
+    font-size: calc(25px + 2vh);
     text-align: center;
 }
 
-.modalWinForm label{
-    padding-bottom: 6px;
-    
-}
-
-.modalWinForm .inputform {
-  background-color: #1e2634;
-  border-radius: 5px;
-  fill: none;
-  border: 1px solid #364250;
-  height: 36px;
-  padding: 5px 10px !important;
-  color: #f7faffd2;
-  margin-bottom: 30px;
-}
-
-.modalWinForm .ButtonWrapper {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-
-.modalWinForm textarea {
-display: flex;
-flex-grow: 1;
-  min-height: 120px !important;
-}
 
 .close {
   position: absolute !important;
@@ -93,4 +66,46 @@ flex-grow: 1;
   font-size: 300%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+
+.listAcdm {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 95%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+}
+
+.xp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.xp h2{
+    color: rgba(237, 248, 235, 0.863);
+    font-size: calc(14px + 1vh);
+}
+
+
+.xp h3{
+    color: rgba(237, 248, 235, 0.863);
+    font-size: calc(7px + 1vh);
+    font-style: italic;
+    font-weight: 300;
+
+}
+
+
+.xp p{
+    color: rgba(237, 248, 235, 0.863);
+    font-size: calc(10px + 1vh);
+    font-weight: 500;
+
 }

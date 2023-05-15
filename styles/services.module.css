@@ -10,10 +10,9 @@
 }
 
 .heading h2 {
-    color: hwb(120 78% 10% / 0.95);
-    font-family:"Space Grotesk,sans-serif" !important; 
-    font-weight: 600;
-    font-size: 35px;
+    color: hwb(120 88% 5% / 0.919);
+    font-weight: 650;
+    font-size: 33px;
 }
 
 .slots {

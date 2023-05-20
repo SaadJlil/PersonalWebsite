@@ -4,6 +4,14 @@ import { MdDownload } from 'react-icons/md'
 import { SiUpwork, SiLinkedin, SiGithub, SiGmail } from 'react-icons/si'
 import useStoreAsideElements from '@/store/asidestoredelements'
 import AcademicModal from '../AsideElements/academic'
+import WorkModal from '../AsideElements/workhistory'
+import AboutMeModal from '../AsideElements/aboutme'
+import Image from "next/image"
+
+import work from '../../public/work.svg'
+import academic from '../../public/academic.svg'
+import aboutme from '../../public/aboutme.svg'
+
 import React, {useState} from 'react'
 
 export default function Aside() {
@@ -53,31 +61,45 @@ function AsideElements() {
 
     return (
         <div className={styles.asideelements}>
-            {StoredAsideElements.map(service => (
-                        <div key={service.id} className={styles.asideelement}>
-                            <h2>{service.name}</h2>
-                        </div>
-                    )
-                )
-            }        
 
-            <div className={styles.asideelement}>
-                <h2>Work History</h2>
+            <div className={styles.asideelement} onClick={() => handleOpenModal_Work()}>
+                <Image
+                    className={styles.asideelementicon}
+                    src={work}
+                    alt={"work history"}
+                    width={400}
+                    height={200}
+                />
             </div>
 
             <div className={styles.asideelement} onClick={() => handleOpenModal_Academic()}>
-                <h2>Academic History</h2>
+                <Image
+                    className={styles.asideelementicon}
+                    src={academic}
+                    alt={"academic history"}
+                    width={400}
+                    height={200}
+                />
+            </div>
+
+            <div className={styles.asideelement} onClick={() => handleOpenModal_About()}>
+                <Image
+                    className={styles.asideelementicon}
+                    src={aboutme}
+                    alt={"about me"}
+                    width={400}
+                    height={200}
+                />
             </div>
 
             <AcademicModal className={styles.asideelement} handleCloseModal={() => handleCloseModal_Academic()} isModalOpen={isModalOpen_Academic}>
             </AcademicModal>
 
+            <WorkModal className={styles.asideelement} handleCloseModal={() => handleCloseModal_Work()} isModalOpen={isModalOpen_Work}></WorkModal>
+
+            <AboutMeModal className={styles.asideelement} handleCloseModal={() => handleCloseModal_About()} isModalOpen={isModalOpen_About}></AboutMeModal>
 
 
-
-            <div className={styles.asideelement}>
-                <h2>About Me</h2>
-            </div>
 
         </div>
     )

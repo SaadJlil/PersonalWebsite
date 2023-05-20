@@ -1,7 +1,7 @@
 import styles from '../../styles/header.module.css'
 import Image from 'next/image'
 import {create} from 'zustand';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import arrow_right from '../../public/arrow_right.svg'
 import arrow_left from '../../public/arrow_left.svg'
@@ -15,8 +15,18 @@ import pytorch from '../../public/pytorch.svg'
 import postgres from '../../public/postgres.svg'
 import main_animation from '../../public/animation.gif'
 
+import communication from '../../public/communication.png'
+import timemanagement from '../../public/timemanagement.png'
+import problemsolving from '../../public/problemsolving.png'
+import collaboration from '../../public/collaboration.png'
+import attentationtodetail from '../../public/attentationtodetail.png'
+import adaptability from '../../public/adaptability.png'
+import continuouslearning from '../../public/continuouslearning.png'
+
 import Projects from '../projects';
 import Services from '../services';
+
+
 
 export default function HeaderBody({handleModalOpenBody}) {
     return (
@@ -73,10 +83,7 @@ const useCounter = create((set) => ({
 
 
  function Skillset() {
-     const [n1, setN1] = useState(1);
-     const [n2, setN2] = useState(5);
-
-     const skills = [
+    const skills_raw = [
          { id:1, name: 'Javascript', icon: javascript, level:'confirmed' },
          { id:2, name: 'Typescript', icon: typescript, level:'confirmed' },
          { id:3, name: 'Python', icon: python, level:'advanced'  },
@@ -85,24 +92,87 @@ const useCounter = create((set) => ({
          { id:6, name: 'Csharp', icon: csharp, level:'confirmed' },
          { id:7, name: 'Dotnet', icon: dotnet, level:'advanced' },
          { id:8, name: 'React', icon: react, level:'confirmed' }
+    ]
+
+     const softskills_raw = [
+         { id:1, name: 'Communication', icon: communication, level:'confirmed' },
+         { id:2, name: 'Problem Solving', icon: problemsolving, level:'confirmed' },
+         { id:3, name: 'Collaboration', icon: collaboration, level:'advanced'  },
+         { id:4, name: 'Adaptability', icon: adaptability, level:'learning' },
+         { id:5, name: 'Time Management', icon: timemanagement, level:'confirmed' },
+         { id:6, name: 'Attention to detail', icon: attentationtodetail, level:'confirmed' },
+         { id:7, name: 'Continuous Leaning', icon: continuouslearning, level:'advanced' }
      ]
+
+     const [skills, setskills] = useState(skills_raw);
+     const [softskills, setsoftskills] = useState(softskills_raw);
 
      let offset =  4;
 
-     const SlideForward = () => {
-         setN1(n1 + offset > skills.length ? n1 + offset - skills.length : n1 + offset);
-         setN2(n2 + offset > skills.length ? n2 + offset - skills.length : n2 + offset);
+    const SlideForward = () => {
+        let firstelement = skills[0];
+        firstelement.id = skills.length + 1;
+
+        skills.shift();
+
+        skills.push(firstelement);
+
+
+        skills.forEach((element, index) => {
+            skills[index].id -= 1;
+        });
+
+        setskills(prev => [...skills]);
+    }
+
+    const SlideBackward = () => {
+        let lastelement = skills[skills.length - 1];
+        lastelement.id = 0;
+
+        skills.unshift(lastelement);
+
+        skills.pop();
+
+        skills.forEach((element, index) => {
+            skills[index].id += 1;
+        });
+
+        setskills(prev => [...skills]);
+    }
+
+    const SlideForwardSoft = () => {
+        let firstelement = softskills[0];
+
+        firstelement.id = softskills.length + 1;
+
+        softskills.shift();
+
+        softskills.push(firstelement);
+
+
+        softskills.forEach((element, index) => {
+            softskills[index].id -= 1;
+        });
+
+        setsoftskills(prev => [...softskills]);
      }
 
-     const SlideBackward = () => {
-         setN1(n1 - offset < 1 ? skills.length + n1 - offset : n1 - offset);
-         setN2(n2 - offset < 1 ? skills.length + n2 - offset : n2 - offset);
+     const SlideBackwardSoft = () => {
+        let lastelement = softskills[softskills.length - 1];
+        lastelement.id = 0;
+
+        softskills.unshift(lastelement);
+
+        softskills.pop();
+
+        softskills.forEach((element, index) => {
+            softskills[index].id += 1;
+        });
+
+        setsoftskills(prev => [...softskills]);
+   
      }
-
-     const { count, increment, decrement } = useCounter();
-
-     const [activeIndex, setActiveIndex] = useState(0);
-
+     
      return (
          <div className={styles.skillsetWrapper}>
             <div className={styles.heading}>
@@ -122,23 +192,9 @@ const useCounter = create((set) => ({
                         alt= "Left arrow"
                     onClick={() => SlideBackward()}
                     />
-                    {skills.filter(skill => (n1 < n2) ? skill.id < n2 && skill.id >= n1 : skill.id < n2 || skill.id >= n1)
-
-                        .sort((a, b) => {
-                            if( a - n1 < 0 ){
-                                if( b - n1 < 0 ){
-                                    return (a < b);
-                                }
-                                return -1;
-                            }
-                            else{
-                                if( b - n1 < 0 ){
-                                    return 1
-                                }
-                                return (a < b);
-                            }
-                        })
-                        .map(skill => (
+                    {skills.filter(
+                            skill => skill.id < 5
+                        ).map(skill => (
                         <div key={skill.id} className={styles.skill}>
                             <Image
                                 className={styles.techIcon}
@@ -165,7 +221,7 @@ const useCounter = create((set) => ({
             </div>
             <div className={styles.Others}>
                 <div className={styles.Title}>
-                    <h2>Other Skills</h2>
+                    <h2>Soft Skills</h2>
                 </div>
                 <div className={styles.skills}>
                     <Image
@@ -174,24 +230,11 @@ const useCounter = create((set) => ({
                         width={20}
                         height={20}
                         alt= "Left arrow"
-                    onClick={() => SlideBackward()}
+                    onClick={() => SlideBackwardSoft()}
                     />
-                    {skills.filter(skill => (n1 < n2) ? skill.id < n2 && skill.id >= n1 : skill.id < n2 || skill.id >= n1)
-
-                        .sort((a, b) => {
-                            if( a - n1 < 0 ){
-                                if( b - n1 < 0 ){
-                                    return (a < b);
-                                }
-                                return -1;
-                            }
-                            else{
-                                if( b - n1 < 0 ){
-                                    return 1
-                                }
-                                return (a < b);
-                            }
-                        })
+                    {softskills.filter(
+                            skill => skill.id < 5
+                        )
                         .map(skill => (
                         <div key={skill.id} className={styles.skill}>
                             <Image
@@ -203,7 +246,6 @@ const useCounter = create((set) => ({
                             />
                             <div className={styles.skilltxt}>
                                 <p className={styles.name}>{skill.name}</p>
-                                <p className={styles.level}>{skill.level}</p>
                             </div>
                         </div>
                     ))}
@@ -213,7 +255,7 @@ const useCounter = create((set) => ({
                         width={20}
                         height={20}
                         alt="Right arrow"
-                        onClick={() => SlideForward()}
+                        onClick={() => SlideForwardSoft()}
                     />
                 </div>
             </div>

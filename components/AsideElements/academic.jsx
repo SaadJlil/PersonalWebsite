@@ -29,13 +29,13 @@ function Academic({isOpen, onClose}) {
         'Toulouse Business School (Casablanca, Morocco)',
     )
     const Toulouse = new AsideStoredElement(
-        1,
+        2,
         "Bachelor in mamagement (3 semester exchange) specialisation in data analysis",
         "2020-2022",
         'Toulouse Business School (Toulouse , France/Barcelona, Spain)'
     )
     const Canada = new AsideStoredElement(
-        1,
+        3,
         "graduate degree in business analytics",
         "Enrolled",
         'Niagara College (Niagara On-The-Lake,Canada)'

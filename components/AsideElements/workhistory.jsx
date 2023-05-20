@@ -5,12 +5,12 @@ import Image from "next/image"
 export default function WorkModal({handleCloseModal, isModalOpen}) {
     return (
         <modalform className={styles.modalform}>        
-            <Academic isOpen={isModalOpen} onClose={() => handleCloseModal()}/>
+            <Work isOpen={isModalOpen} onClose={() => handleCloseModal()}/>
         </modalform>
    )
 }
 
-class AsideStoredElement{
+class workExp{
     constructor(id, name, date, description){
         this.id = id;
         this.name = name;
@@ -19,47 +19,41 @@ class AsideStoredElement{
     }
 }
 
-function Academic({isOpen, onClose}) {
+function Work({isOpen, onClose}) {
 
-
-    const MarocTbs = new AsideStoredElement(
+    const islucid = new workExp(
         1,
-        "Bachelor in management (General)",
-        "2019 - 2020",
-        'Toulouse Business School (Casablanca, Morocco)',
-    )
-    const Toulouse = new AsideStoredElement(
-        1,
-        "Bachelor in mamagement (3 semester exchange) specialisation in data analysis",
-        "2020-2022",
-        'Toulouse Business School (Toulouse , France/Barcelona, Spain)'
-    )
-    const Canada = new AsideStoredElement(
-        1,
-        "graduate degree in business analytics",
-        "Enrolled",
-        'Niagara College (Niagara On-The-Lake,Canada)'
+        "LEAD SPECIALIST INTERN",
+        "JUNE - August 2021",
+        'IsLucid (Vilnius, Lithuania)',
     )
 
-    const academicExp = [MarocTbs, Toulouse, Canada]
+    const gtbconsultings = new workExp(
+        2,
+        "DATA ANALYST INTERN",
+        "April - August 2022",
+        'GTBConsultings (Gothenburg, Sweden)'
+    )
+
+    const workhistory = [islucid, gtbconsultings]
 
     if(!isOpen) return null;
 
     return (
-        <div className={styles.AcademicFormFull}>
+        <div className={styles.WorkFormFull}>
             <div className={styles.modalContainer}>
                 <div className={styles.modalWin}>
                         <span className={styles.close} onClick={() => onClose()}>
                             &times;
                         </span> 
                     <div className={styles.WinTitle}>
-                        <h2><span className={styles.something}>Academic Record</span></h2>
+                        <h2><span className={styles.something}>Work History</span></h2>
                     </div>
 
                     <div className={styles.modalWinForm}>
 
                         <div className={styles.listAcdm}>
-                            {academicExp.map((exp) => (
+                            {workhistory.map((exp) => (
                                <div key={exp.id} className={styles.xp}>
                                     <h2>{exp.name}</h2>
                                     <h3>{exp.date}</h3>

@@ -12,16 +12,48 @@ import work from '../../public/work.svg'
 import academic from '../../public/academic.svg'
 import aboutme from '../../public/aboutme.svg'
 
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
-export default function Aside() {
-    return (
-        <aside className={styles.aside}>
+
+
+
+export default function Aside({isAsideOpen_}) {
+
+    if (typeof window !== 'undefined') {
+
+        const [windowDimensions, setWindowDimensions] = useState({
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+
+
+        
+        useEffect(() => {
+            const handleResize = () => {
+            setWindowDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+            };
+        
+            window.addEventListener('resize', handleResize);
+        
+            // Clean up the event listener when the component unmounts
+            return () => {
+            window.removeEventListener('resize', handleResize);
+            };
+        }, []);
+
+        return (
+        <aside className={styles.aside} style={{ transform:((!isAsideOpen_ && windowDimensions.width < 1143) ?  'translate(100%, 0)' : 'translate(0, 0)') }}>
             <Profile />
             <AsideElements />
             <Medias />
         </aside>
     )
+
+    }
+
 }
 
 function AsideElements() {

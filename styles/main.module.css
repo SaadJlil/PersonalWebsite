@@ -1,3 +1,58 @@
 .main {
     width: 100%;
+
+}
+
+@media (max-width: 1143px) {
+
+    .main{
+       --iconham: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .main{
+       --iconham: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .main{
+       --iconham: 35px;
+    }
+}
+
+
+.iconburgContainer {
+    top: 0;
+    right: 0;
+    padding: var(--iconham)/2;
+    width: calc(var(--iconham) + var(--iconham)/2);
+    height: calc(var(--iconham)*259/310 + var(--iconham)/2);
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
+    position: fixed;
+    display: none;
+}
+
+.iconburg{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--iconham);
+    height: auto;
+
+    z-index: 5;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1143px) {
+
+    .iconburgContainer{
+        display: block;
+    }
 }

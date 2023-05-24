@@ -32,8 +32,26 @@
     height: 100vh;
     border-radius: 6px;
     overflow: hidden;
-
 }
+
+.main .animation .after_ {
+    display: none;
+}
+/*
+@media (max-height: 822px) {
+    .main .animation .before_{
+        display: none;
+    }
+    .main .animation .after_ {
+        display: block;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+}
+
+*/
 
 .hireme {
     display: flex;
@@ -94,6 +112,27 @@
     width: 100%;
     position: relative;
     left: 2%;
+}
+
+
+@media (max-width: 1210px) {
+   .skillsetWrapper .heading {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .technical{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .Others{
+        display: flex;
+        justify-content: center;
+    }
+    
 }
 
 .skillsetWrapper .heading {
@@ -230,7 +269,6 @@
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    width: 70%;
     height: 130px;
 }
 
@@ -246,19 +284,19 @@
     transition: top ease 0.5s;
 
     border: 1px groove rgba(128, 133, 140, 0.138);
-    height: 60%;
-    width: 40%;
+    height: 70%;
+    width: 210px;
 }
 
 .skill p {
     font-family: 'Barlow Semi Condensed', sans-serif !important;
     color: #f7f7f7;
-    font-size: calc(5px + 1vw);
+    font-size: 21px;
     font-weight: 500;
 }
 
 .skill .level {
-    font-size: calc(4px + 1vw);
+    font-size: 18px;
     font-weight: 400;
     color: #f7f7f7c5;
 }

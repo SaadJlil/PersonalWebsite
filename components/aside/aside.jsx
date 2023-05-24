@@ -3,9 +3,6 @@ import styles from '../../styles/aside.module.css'
 import { MdDownload } from 'react-icons/md'
 import { SiUpwork, SiLinkedin, SiGithub, SiGmail } from 'react-icons/si'
 import useStoreAsideElements from '@/store/asidestoredelements'
-import AcademicModal from '../AsideElements/academic'
-import WorkModal from '../AsideElements/workhistory'
-import AboutMeModal from '../AsideElements/aboutme'
 import Image from "next/image"
 
 import work from '../../public/work.svg'
@@ -15,9 +12,7 @@ import aboutme from '../../public/aboutme.svg'
 import React, {useState, useEffect} from 'react'
 
 
-
-
-export default function Aside({isAsideOpen_}) {
+export default function Aside({isAsideOpen_, handleOpenModal_Academic_, handleOpenModal_Work_, handleOpenModal_About_}) {
 
     if (typeof window !== 'undefined') {
 
@@ -47,7 +42,7 @@ export default function Aside({isAsideOpen_}) {
         return (
         <aside className={styles.aside} style={{ transform:((!isAsideOpen_ && windowDimensions.width < 1143) ?  'translate(100%, 0)' : 'translate(0, 0)') }}>
             <Profile />
-            <AsideElements />
+            <AsideElements handleOpenModal_Work={() => handleOpenModal_Work_()} handleOpenModal_Academic={() => handleOpenModal_Academic_()} handleOpenModal_About={() => handleOpenModal_About_()}/>
             <Medias />
         </aside>
     )
@@ -56,39 +51,8 @@ export default function Aside({isAsideOpen_}) {
 
 }
 
-function AsideElements() {
+function AsideElements({handleOpenModal_Work, handleOpenModal_About, handleOpenModal_Academic}) {
     const StoredAsideElements = useStoreAsideElements((state) => state.elements)
-
-    const [isModalOpen_Academic, setIsModalOpen_Academic] = useState(false);
-
-    const [isModalOpen_Work, setIsModalOpen_Work] = useState(false);
-
-    const [isModalOpen_About, setIsModalOpen_About] = useState(false);
-
-    const handleOpenModal_Academic = () => {
-        setIsModalOpen_Academic(true);
-    }
-    
-    const handleCloseModal_Academic = () => {
-        setIsModalOpen_Academic(false);
-    }
-
-    const handleOpenModal_Work = () => {
-        setIsModalOpen_Work(true);
-    }
-    
-    const handleCloseModal_Work = () => {
-        setIsModalOpen_Work(false);
-    }
-
-    const handleOpenModal_About = () => {
-        setIsModalOpen_About(true);
-    }
-    
-    const handleCloseModal_About = () => {
-        setIsModalOpen_About(false);
-    }
-
 
 
     return (
@@ -124,14 +88,7 @@ function AsideElements() {
                 />
             </div>
 
-            <AcademicModal className={styles.asideelement} handleCloseModal={() => handleCloseModal_Academic()} isModalOpen={isModalOpen_Academic}>
-            </AcademicModal>
-
-            <WorkModal className={styles.asideelement} handleCloseModal={() => handleCloseModal_Work()} isModalOpen={isModalOpen_Work}></WorkModal>
-
-            <AboutMeModal className={styles.asideelement} handleCloseModal={() => handleCloseModal_About()} isModalOpen={isModalOpen_About}></AboutMeModal>
-
-
+            
 
         </div>
     )

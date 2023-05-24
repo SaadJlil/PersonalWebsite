@@ -21,6 +21,32 @@
     box-shadow: -4px -3px 25px 11px rgba(0, 0, 0, 0.218);
 }
 
+
+@media (max-width: 962px) {
+    .modalContainer {
+        width: 60%;
+    }
+}
+@media (max-width: 500px) {
+    .modalContainer {
+        width: 70%;
+    }
+}
+@media (max-width: 400px) {
+    .modalContainer {
+        width: 80%;
+    }
+}
+@media (max-width: 385px) {
+    .modalContainer {
+        width: 95%;
+    }
+}
+
+
+
+
+
 .modalWin {
   margin-top: 10px;
   display: flex;

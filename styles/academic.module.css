@@ -1,6 +1,9 @@
 .AcademicFormFull{
     height: 100vh;
     width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
     backdrop-filter: blur(3px);
     background-image: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.238));
 }
@@ -19,7 +22,31 @@
     border: 1px groove #43405763;
     border-radius: 20px;
     box-shadow: -4px -3px 25px 11px rgba(0, 0, 0, 0.218);
+
 }
+
+
+@media (max-width: 962px) {
+    .modalContainer {
+        width: 60%;
+    }
+}
+@media (max-width: 500px) {
+    .modalContainer {
+        width: 70%;
+    }
+}
+@media (max-width: 400px) {
+    .modalContainer {
+        width: 80%;
+    }
+}
+@media (max-width: 385px) {
+    .modalContainer {
+        width: 95%;
+    }
+}
+
 
 .modalWin {
   margin-top: 10px;

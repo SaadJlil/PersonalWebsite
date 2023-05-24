@@ -2,6 +2,7 @@ import styles from '../../styles/header.module.css'
 import Image from 'next/image'
 import {create} from 'zustand';
 import { useEffect, useState } from 'react';
+import React from 'react'
 
 import arrow_right from '../../public/arrow_right.svg'
 import arrow_left from '../../public/arrow_left.svg'
@@ -25,8 +26,7 @@ import continuouslearning from '../../public/continuouslearning.png'
 
 import Projects from '../projects';
 import Services from '../services';
-
-
+  
 
 export default function HeaderBody({handleModalOpenBody}) {
     return (
@@ -44,8 +44,8 @@ export default function HeaderBody({handleModalOpenBody}) {
 
 function HeaderMain({handleModalOpen}) {
     return (
-        <main className={styles.main}>
-            <div className={styles.mainTxtSide}>
+        <div className={styles.main}>
+           <div className={styles.mainTxtSide}>
                 <div className={styles.heading}>
                     <div className={styles.saad}>
                         <p>Hi, my name is 
@@ -63,26 +63,73 @@ function HeaderMain({handleModalOpen}) {
                 </div>
                 
             </div>
-            <div className={styles.animation}>
+            <div className={`${styles.animation} ${styles.before_}`}>
                 <Image src={main_animation} alt="" width={640} height={640}/>
             </div>
-        </main>
+        </div>
     )
 }
 
-const useCounter = create((set) => ({
-     count: 0,
-     increment: () => set((state) => ({ count: state.count + 1 })),
-     decrement: () => set((state) => ({ count: state.count - 1 })),
- }));
-
- const Carousel = ({ images }) => {
-
- };
-
-
 
  function Skillset() {
+
+    if (typeof window !== 'undefined') {
+
+        const [windowDimensions, setWindowDimensions] = useState({
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+
+
+        
+        useEffect(() => {
+            const handleResize = () => {
+            setWindowDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+            };
+        
+            window.addEventListener('resize', handleResize);
+        
+            // Clean up the event listener when the component unmounts
+            return () => {
+            window.removeEventListener('resize', handleResize);
+            };
+        }, []);
+
+
+
+     const [numberDisplay, setNumberDisplay] = useState(1);
+
+     useEffect(() => {
+        let width = windowDimensions.width;
+
+        setNumberDisplay(4);
+
+        if(width > 1143){
+                if( width < 1284){
+                    setNumberDisplay(2)
+                }
+                else if( width < 1642){
+                    setNumberDisplay(3)
+                }
+        } else {
+            if( width < 779){
+                setNumberDisplay(1)
+            }
+            else if( width < 1038){
+                setNumberDisplay(2)
+            }
+            else{
+                setNumberDisplay(3);
+            }
+        }
+
+
+    }, [windowDimensions]);
+   
+
     const skills_raw = [
          { id:1, name: 'Javascript', icon: javascript, level:'confirmed' },
          { id:2, name: 'Typescript', icon: typescript, level:'confirmed' },
@@ -107,7 +154,7 @@ const useCounter = create((set) => ({
      const [skills, setskills] = useState(skills_raw);
      const [softskills, setsoftskills] = useState(softskills_raw);
 
-     let offset =  4;
+
 
     const SlideForward = () => {
         let firstelement = skills[0];
@@ -193,7 +240,7 @@ const useCounter = create((set) => ({
                     onClick={() => SlideBackward()}
                     />
                     {skills.filter(
-                            skill => skill.id < 5
+                            skill => skill.id < numberDisplay + 1 
                         ).map(skill => (
                         <div key={skill.id} className={styles.skill}>
                             <Image
@@ -233,7 +280,7 @@ const useCounter = create((set) => ({
                     onClick={() => SlideBackwardSoft()}
                     />
                     {softskills.filter(
-                            skill => skill.id < 5
+                            skill => skill.id < numberDisplay + 1 
                         )
                         .map(skill => (
                         <div key={skill.id} className={styles.skill}>
@@ -262,4 +309,5 @@ const useCounter = create((set) => ({
             </div>
         </div>
      )
+    }
  }

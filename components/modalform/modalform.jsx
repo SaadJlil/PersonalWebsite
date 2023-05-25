@@ -49,7 +49,7 @@ function Modal({isOpen, onClose}) {
                         <label>Message</label>
                         <textarea className={styles.inputform} type="text" />
                         <div className={styles.ButtonWrapper}>
-                            <Button_ className={styles.button_} link="#"  content="Submit" onClick={() => SendEmail()}/> 
+                            <Button_ className={styles.button_} link="#"  content="Submit" clicked={() => SendEmail()}/> 
                         </div>
 
                     </div>

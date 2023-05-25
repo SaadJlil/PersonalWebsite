@@ -16,31 +16,16 @@ export default function Modalform({handleCloseModal, isModalOpen}) {
 }
 
 
-function SendEmail() {
-    console.log("test completed");
-    const headers = new Headers()
-    headers.append("Content-Type", "application/json")
-    
-    const body = {
-      "test": "event"
-    }
-    
-    const options = {
-      method: "POST",
-      headers,
-      mode: "cors",
-      body: JSON.stringify(body),
-    }
-    
-    fetch("https://eok9t3vldb3m6oo.m.pipedream.net", options)
-
-
-}
-
-
 function Modal({isOpen, onClose}) {
 
     if(!isOpen) return null;
+
+    let SendEmail = function(){
+        console.log("test completed");
+                return 0;
+    }
+
+
 
     return (
         <div className={styles.modalFormFull}>

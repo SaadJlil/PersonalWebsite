@@ -17,6 +17,7 @@ export default function Modalform({handleCloseModal, isModalOpen}) {
 
 
 function SendEmail() {
+    console.log("test completed");
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
     
@@ -33,7 +34,6 @@ function SendEmail() {
     
     fetch("https://eok9t3vldb3m6oo.m.pipedream.net", options)
 
-    console.log("test completed");
 
 }
 

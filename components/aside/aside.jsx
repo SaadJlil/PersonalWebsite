@@ -119,18 +119,18 @@ function Profile() {
 function Medias() {
     return (
         <div className={styles.mediaWrapper}>
-            <div className={styles.mediaSlot}>
+            <a className={styles.mediaSlot} target="_blank" href='https://https://github.com/SaadJlil'>
                 <SiGithub  size="60%"/>
-            </div>
-            <div className={styles.mediaSlot}>
+            </a>
+            <a className={styles.mediaSlot} target="_blank" href='https://https://www.linkedin.com/in/saad-jlil-0ab6831a9/?originalSubdomain=fr'>
                 <SiLinkedin size="60%"/>
-            </div>
-            <div className={styles.mediaSlot}>
+            </a>
+            <a className={styles.mediaSlot} href="mailto:sailjlad@gmail.com">
                 <SiGmail size="60%"/>
-            </div>
-            <div className={styles.mediaSlot}>
+            </a>
+            <a className={styles.mediaSlot} target="_blank" href='https://www.upwork.com/freelancers/~01f1699bdc05fec521'>
                 <SiUpwork size="60%"/>
-            </div>
+            </a>
         </div>
     )
 }

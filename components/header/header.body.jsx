@@ -48,7 +48,7 @@ function HeaderMain({handleModalOpen}) {
            <div className={styles.mainTxtSide}>
                 <div className={styles.heading}>
                     <div className={styles.saad}>
-                        <p>Hi, my name  
+                        <p>Hi, my name is 
                             <br /><span className={styles.name}>Saad JLIL</span>    
                             <br /><span className={styles.work}>Backend Developer.</span>    
                         </p>

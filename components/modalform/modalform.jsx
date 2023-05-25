@@ -16,6 +16,26 @@ export default function Modalform({handleCloseModal, isModalOpen}) {
 }
 
 
+function SendEmail() {
+    const headers = new Headers()
+    headers.append("Content-Type", "application/json")
+    
+    const body = {
+      "test": "event"
+    }
+    
+    const options = {
+      method: "POST",
+      headers,
+      mode: "cors",
+      body: JSON.stringify(body),
+    }
+    
+    fetch("https://eok9t3vldb3m6oo.m.pipedream.net", options)
+
+}
+
+
 function Modal({isOpen, onClose}) {
 
     if(!isOpen) return null;
@@ -42,7 +62,7 @@ function Modal({isOpen, onClose}) {
                         <label>Message</label>
                         <textarea className={styles.inputform} type="text" />
                         <div className={styles.ButtonWrapper}>
-                            <Button_ className={styles.button_} link="#"  content="Submit" /> 
+                            <Button_ className={styles.button_} link="#"  content="Submit" onClick={() => SendEmail()}/> 
                         </div>
 
                     </div>

@@ -20,25 +20,34 @@ function Modal({isOpen, onClose}) {
 
     if(!isOpen) return null;
 
-    let SendEmail = function(){
+    let SendEmail = function(email_, name_, organisation_, services_, message_){
         const headers = new Headers()
         headers.append("Content-Type", "application/json")
         
         const body = {
-        "test": "event"
+          "name": name_,
+          "email": email_,
+          "organisation": organisation_,
+          "message": message_,
+          "services": services_ 
         }
         
         const options = {
-        method: "POST",
-        headers,
-        mode: "cors",
-        body: JSON.stringify(body),
+          method: "POST",
+          headers,
+          mode: "cors",
+          body: JSON.stringify(body),
         }
         
-        fetch("https://eok9t3vldb3m6oo.m.pipedream.net", options)
-
-        return 0;
+        fetch("https://eoxsoh07avpnozv.m.pipedream.net", options)       
     }
+
+
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
+    const [organisation, setOrganisation] = useState("");
+    const [services, setServices] = useState("");
+    const [message, setMessage] = useState("");
 
 
 
@@ -56,15 +65,18 @@ function Modal({isOpen, onClose}) {
 
                         
                         <label>Name</label>
-                        <input className={styles.inputform} type="text" />
+                        <input className={styles.inputform} type="text" onInput={e => setName(e.target.value)} />
                         <label>Organisation</label>
-                        <input className={styles.inputform} type="text" />
+                        <input className={styles.inputform} type="text" onInput={e => setOrganisation(e.target.value)}/>
+                        <label>Email Address</label>
+                        <input className={styles.inputform} type="text" onInput={e => setEmail(e.target.value)}/>
                         <label>Services you want me to be involved in</label>
-                        <input className={styles.inputform} type="text" />
+                        <input className={styles.inputform} type="text" onInput={e => setServices(e.target.value)}/>
+
                         <label>Message</label>
-                        <textarea className={styles.inputform} type="text" />
+                        <textarea className={styles.inputform} type="text" onInput={e => setMessage(e.target.value)}/>
                         <div className={styles.ButtonWrapper}>
-                            <Button_ className={styles.button_} link="#"  content="Submit" clicked={() => SendEmail()}/> 
+                            <Button_ className={styles.button_} link="#"  content="Submit" clicked={() => SendEmail(email, name, organisation, services, message)}/> 
                         </div>
 
                     </div>

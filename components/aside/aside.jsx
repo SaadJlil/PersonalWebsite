@@ -107,7 +107,7 @@ function Profile() {
                     <p className={styles.name}>Saad Jlil</p>
                     <p className={styles.function}>software developer</p>
                 </div>
-                <a href={'../../public/work.svg'} target={'_blank'} className={styles.ctaProfile} download>
+                <a href={'/DevResume_Saad.pdf'} target={'_blank'} className={styles.ctaProfile} download>
                     <MdDownload className={styles.downloads}/>
                     <p>get resume</p>
                 </a>

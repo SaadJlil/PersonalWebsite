@@ -3,24 +3,24 @@ import styles from '../../styles/modalform.module.css'
 import Button_ from '../button_' 
 import Image from "next/image"
 
-export default function Modalform({handleCloseModal, isModalOpen}) {
+export default function Modalform({handleCloseContent, handleOpenContent, isContentOpen_, handleCloseModal, isModalOpen}) {
 
     
 
     return (
         <modalform className={styles.modalform}>        
-            <Modal isOpen={isModalOpen} onClose={() => handleCloseModal()}/>
+            <Modal handleCloseContent_={() => handleCloseContent()} handleOpenContent_={() => handleOpenContent()} isContentOpen={isContentOpen_} isOpen={isModalOpen} onClose={() => handleCloseModal()}/>
         </modalform>
 
     )
 }
 
 
-function Modal({isOpen, onClose}) {
+function Modal({handleCloseContent_, handleOpenContent_, isContentOpen, isOpen, onClose}) {
 
     if(!isOpen) return null;
 
-    let SendEmail = function(email_, name_, organisation_, services_, message_){
+    let SendEmail = function(successMessage, handleMessageResponse, handleCloseContent, email_, name_, organisation_, services_, message_){
         const headers = new Headers()
         headers.append("Content-Type", "application/json")
         
@@ -39,9 +39,21 @@ function Modal({isOpen, onClose}) {
           body: JSON.stringify(body),
         }
         
-        fetch("https://eoxsoh07avpnozv.m.pipedream.net", options)       
+        fetch("https://eoxsoh07avpnozv.m.pipedream.net", options)
+            .then(response => {
+                handleMessageResponse(successMessage)
+                handleCloseContent()
+            })
+            .catch(error => {
+                console.log(error.message)
+                handleMessageResponse("An Error Has Occured!")
+                handleCloseContent()
+            });
+
     }
 
+    let successMessage_ = "Thanks for the submission"
+    const [responseMessage, setResponseMessage] = useState(successMessage_);
 
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
@@ -50,38 +62,59 @@ function Modal({isOpen, onClose}) {
     const [message, setMessage] = useState("");
 
 
+    if(isContentOpen)
+    { 
+        return (
+            <div className={styles.modalFormFull}>
+                <div className={styles.modalContainer}>
+                    <div className={styles.modalWin}>
+                            <span className={styles.close} onClick={() => onClose()}>
+                                &times;
+                            </span> 
+
+                        <h2>Hiring Form</h2>
+
+                        <div className={styles.modalWinForm}>
+
+                            
+                            <label>Name</label>
+                            <input className={styles.inputform} type="text" onInput={e => setName(e.target.value)} />
+                            <label>Organisation</label>
+                            <input className={styles.inputform} type="text" onInput={e => setOrganisation(e.target.value)}/>
+                            <label>Email Address</label>
+                            <input className={styles.inputform} type="text" onInput={e => setEmail(e.target.value)}/>
+                            <label>Services you want me to be involved in</label>
+                            <input className={styles.inputform} type="text" onInput={e => setServices(e.target.value)}/>
+
+                            <label>Message</label>
+                            <textarea className={styles.inputform} type="text" onInput={e => setMessage(e.target.value)}/>
+                            <div className={styles.ButtonWrapper}>
+                                <Button_ className={styles.button_} link="#"  content="Submit" clicked={() => SendEmail(successMessage_, (message) => setResponseMessage(message), () => handleCloseContent_(), email, name, organisation, services, message)}/> 
+                            </div>
+
+                        </div>
+                </div>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className={styles.modalFormFull}>
             <div className={styles.modalContainer}>
                 <div className={styles.modalWin}>
-                        <span className={styles.close} onClick={() => onClose()}>
+                        <span className={styles.close} onClick={() => {
+                                onClose();
+                                handleOpenContent_();
+                            }}>
                             &times;
                         </span> 
 
-                    <h2>Hiring Form</h2>
+                    <h2>{responseMessage}</h2>
 
-                    <div className={styles.modalWinForm}>
-
-                        
-                        <label>Name</label>
-                        <input className={styles.inputform} type="text" onInput={e => setName(e.target.value)} />
-                        <label>Organisation</label>
-                        <input className={styles.inputform} type="text" onInput={e => setOrganisation(e.target.value)}/>
-                        <label>Email Address</label>
-                        <input className={styles.inputform} type="text" onInput={e => setEmail(e.target.value)}/>
-                        <label>Services you want me to be involved in</label>
-                        <input className={styles.inputform} type="text" onInput={e => setServices(e.target.value)}/>
-
-                        <label>Message</label>
-                        <textarea className={styles.inputform} type="text" onInput={e => setMessage(e.target.value)}/>
-                        <div className={styles.ButtonWrapper}>
-                            <Button_ className={styles.button_} link="#"  content="Submit" clicked={() => SendEmail(email, name, organisation, services, message)}/> 
-                        </div>
-
-                    </div>
-               </div>
+                </div>
             </div>
-        </div>
+        </div>   
     )
+
 }

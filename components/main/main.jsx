@@ -19,6 +19,18 @@ export default function Main() {
     const [isModalOpen_, setIsModalOpen_] = useState(false);
     const [isAsideOpen, setIsAsideOpen_] = useState(false);
 
+    const [isContentOpen, setIsContentOpen_] = useState(true);
+
+    const handleOpenContent_ = () => {
+        console.log("got in babbyyyyyyyyyyyyyyyyyy");
+        setIsContentOpen_(true);
+    }
+    
+    const handleCloseContent_ = () => {
+        setIsContentOpen_(false);
+    }
+
+
 
     const handleOpenModal_ = () => {
         setIsModalOpen_(true);
@@ -84,7 +96,7 @@ export default function Main() {
             <Aside handleOpenModal_Academic_={() => handleOpenModal_Academic()} handleOpenModal_Work_={() => handleOpenModal_Work()} handleOpenModal_About_={() => handleOpenModal_About()} isAsideOpen_={isAsideOpen} ></Aside>
             <Header handleOpenModalHeader={() => handleOpenModal_()}></Header>
             
-            <Modalform handleCloseModal={() => handleCloseModal_()} isModalOpen={isModalOpen_}></Modalform>
+            <Modalform handleCloseModal={() => handleCloseModal_()} isModalOpen={isModalOpen_} isContentOpen_={isContentOpen} handleCloseContent={() => handleCloseContent_()} handleOpenContent={() => handleOpenContent_()}></Modalform>
 
 
             <AcademicModal className={styles.modal} handleCloseModal={() => handleCloseModal_Academic()} isModalOpen={isModalOpen_Academic}>
@@ -93,11 +105,6 @@ export default function Main() {
             <WorkModal className={styles.modal} handleCloseModal={() => handleCloseModal_Work()} isModalOpen={isModalOpen_Work}></WorkModal>
 
             <AboutMeModal className={styles.modal} handleCloseModal={() => handleCloseModal_About()} isModalOpen={isModalOpen_About}></AboutMeModal>
-
-
-
-
-
         </main>
     )
 }

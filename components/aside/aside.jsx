@@ -10,6 +10,7 @@ import academic from '../../public/academic.svg'
 import aboutme from '../../public/aboutme.svg'
 
 import React, {useState, useEffect} from 'react'
+import Link from 'next/link'
 
 
 export default function Aside({isAsideOpen_, handleOpenModal_Academic_, handleOpenModal_Work_, handleOpenModal_About_}) {
@@ -106,10 +107,10 @@ function Profile() {
                     <p className={styles.name}>Saad Jlil</p>
                     <p className={styles.function}>software developer</p>
                 </div>
-                <button className={styles.ctaProfile}>
+                <a href={'../../public/work.svg'} target={'_blank'} className={styles.ctaProfile} download>
                     <MdDownload className={styles.downloads}/>
                     <p>get resume</p>
-                </button>
+                </a>
             </div>
         </div>
     )

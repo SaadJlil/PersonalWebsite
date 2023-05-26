@@ -115,6 +115,7 @@
     padding: 4px;
     color: #f7f7f7;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .ctaProfile:hover {

@@ -19,7 +19,7 @@
     width: 100%;
     overflow-x: hidden;
     background-image: linear-gradient(90deg,#1b1e2b92,#2e3d307b);
-    padding: 0 45px;
+    padding: 0 5%;
     gap: 25vh;
 }
 
@@ -29,29 +29,14 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 100vh;
+    padding-top: 15%;
     border-radius: 6px;
     overflow: hidden;
 }
 
-.main .animation .after_ {
-    display: none;
-}
-/*
-@media (max-height: 822px) {
-    .main .animation .before_{
-        display: none;
-    }
-    .main .animation .after_ {
-        display: block;
-    }
 
-    .main {
-        flex-direction: column;
-    }
-}
 
-*/
+
 
 .hireme {
     display: flex;
@@ -79,15 +64,14 @@
 }
 
 .main .animation {
-    width: 40%;
+    width: 38%;
     height: 100%;
 }
 
 .main .animation img{
     position: relative;
-    top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -15%);
     height: auto;
     width: 100%;
     z-index: 1;
@@ -147,7 +131,7 @@
 }
 
 .mainTxtSide {
-    width: 55%;
+    width: 50%;
     padding: 2% 2%;
     height: 80%;
     display: flex;
@@ -156,6 +140,18 @@
     gap: 7%;
 
 }
+
+@media (max-width: 822px) {
+    .animation{
+        display: none;
+    }
+
+    .mainTxtSide{
+        width: 100%;
+    }
+}
+
+
 
 .saad {
     display: flex;
@@ -212,7 +208,7 @@
     flex-direction: column;
     padding: 5%;
     padding-left: 5%;
-    gap: 20%;
+    gap: 5vh;
     
 }
 

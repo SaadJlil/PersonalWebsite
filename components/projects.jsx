@@ -17,7 +17,7 @@ export default function Projects() {
                         </div>
                         <div className={styles.imgWrap}>
                             <Image
-                            className={styles.slotImg}
+                                className={styles.slotImg}
                                 src={project.img}
                                 alt={project.name}
                                 width={400}

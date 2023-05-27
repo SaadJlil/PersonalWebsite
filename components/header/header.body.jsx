@@ -63,7 +63,7 @@ function HeaderMain({handleModalOpen}) {
                 </div>
                 
             </div>
-            <div className={`${styles.animation} ${styles.before_}`}>
+            <div className={styles.animation}>
                 <Image src={main_animation} alt="" width={640} height={640}/>
             </div>
         </div>

@@ -12,7 +12,8 @@
 .heading h2 {
     color: hwb(120 88% 5% / 0.919);
     font-weight: 650;
-    font-size: 33px;
+    font-size: calc(23px + 0.7vw);
+    text-align: center;
 }
 
 .slots {
@@ -34,6 +35,14 @@
     background-color: #1C1C27;
     border: 1px solid #f7f7f729;
     border-radius: 5px;
+}
+
+@media (max-width: 400px) {
+    .slot{
+        height: auto;
+        width: 90%;
+    }
+    
 }
 
 .slot:hover{

@@ -68,7 +68,7 @@
     height: 100%;
 }
 
-.main .animation img{
+.main .animation .anim{
     position: relative;
     left: 50%;
     transform: translate(-50%, -15%);

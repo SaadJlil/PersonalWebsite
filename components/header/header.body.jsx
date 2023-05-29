@@ -14,7 +14,11 @@ import typescript from '../../public/ts.svg'
 import javascript from '../../public/js.svg'
 import pytorch from '../../public/pytorch.svg'
 import postgres from '../../public/postgres.svg'
+
+
 import main_animation from '../../public/animation.gif'
+
+
 
 import communication from '../../public/communication.png'
 import timemanagement from '../../public/timemanagement.png'
@@ -64,7 +68,11 @@ function HeaderMain({handleModalOpen}) {
                 
             </div>
             <div className={styles.animation}>
-                <Image src={main_animation} alt="" width={640} height={640}/>
+
+                <video className={styles.anim} autoPlay loop muted playsInline>
+                    <source className={styles.anim} src={"animation.webm"} type={"video/webm"}/>
+                    <source className={styles.anim} src={"animation.mp4"} type={"video/mp4"}/>
+                </video>                
             </div>
         </div>
     )

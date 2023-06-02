@@ -1,8 +1,8 @@
 import  {create} from 'zustand'
 
-import casatour from '../public/projects/casatour.webp'
-import agoradexed from '../public/projects/agoradex.webp'
-import chemistry from '../public/projects/chemistry.png'
+import chemistry from '../public/projects/microservice.png'
+import agoradexed from '../public/projects/calib.png'
+import casatour from '../public/projects/Cephiro.png'
 
 import react from '../public/react.svg'
 import dotnet from '../public/dotnet.svg'

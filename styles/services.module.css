@@ -37,12 +37,37 @@
     border-radius: 5px;
 }
 
+
+.slot img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(90%);
+    z-index: 0;
+}
+
 @media (max-width: 400px) {
     .slot{
-        height: auto;
         width: 90%;
     }
     
+    .slot img{
+        display: none;
+    }
+   
+
+    .slot{
+        border: 1px groove #f7f7f716;
+        border-radius: 10px;
+
+    }
+
+    .slot .slotfade {
+        opacity: 1;
+    }
+  
 }
 
 .slot:hover{
@@ -50,6 +75,9 @@
     border-radius: 10px;
     transition: 0.3s ease-out;
 }
+
+
+
 
 
 @media (max-width: 1210px) {
@@ -70,18 +98,9 @@
         align-items: center;
         justify-content: center;
     }
-    
+   
 }
 
-.slot img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    filter: brightness(90%);
-    z-index: 0;
-}
 
 .slotTitle {
     display: flex;

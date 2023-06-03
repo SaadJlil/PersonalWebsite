@@ -96,6 +96,9 @@
     width: 100%;
     position: relative;
     left: 2%;
+    display: flex;
+    flex-direction: column;
+
 }
 
 
@@ -230,12 +233,11 @@
     gap: 3%;
 }
 
-.skillsWrapper {
-}
 
 .skillsWrapper .Title {
     width: 20%;
 }
+
 
 .technical h2 {
     color: #f7f7f7d7;
@@ -244,6 +246,9 @@
     font-size: 30px !important;
     width: 100%;
 }
+
+
+
 
 .Others {
     display: flex;
@@ -259,6 +264,32 @@
     font-weight: 500;
     font-size: 30px !important;
 }
+
+@media (max-width: 608px) {
+    .technical {
+        flex-direction: column;
+    }
+ 
+    .skillsWrapper .Title{
+        text-align: center;
+        width: 100%;
+    }
+
+    .Others{
+        flex-direction: column;
+    }
+
+    .skillsWrapper {
+        gap: 20px;
+    }
+
+
+    .skillsetWrapper .heading{
+        text-align: center;
+    }
+
+}
+
 
 .skills{
     display: flex;

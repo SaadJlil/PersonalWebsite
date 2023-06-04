@@ -21,8 +21,8 @@ class Service {
 
 const interfaces = new Service(
     1,
-    "Casa Tour",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
+    "UX/UI Design",
+    'Crafting user-centric experiences that engage and delight your audience',
     interface_img,
     300,
     300
@@ -30,8 +30,8 @@ const interfaces = new Service(
 
 const Containerisation = new Service(
     4,
-    "Casa Tour",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
+    "Containerization",
+    'Streamlining application deployment with scalable and portable container solutions',
     containerisation_img,
     300,
     300
@@ -39,8 +39,8 @@ const Containerisation = new Service(
 
 const Webserver = new Service(
     2,
-    "Chemistery",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
+    "Web Development",
+    'Transforming your vision into a dynamic and responsive online presence',
     webserver_img,
     260,
     260
@@ -48,8 +48,8 @@ const Webserver = new Service(
 
 const Database = new Service(
     3,
-    "AgoraDEX",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
+    "Database Management",
+    'Efficiently organize and optimize your data for seamless operations',
     database_img,
     300,
     300
@@ -57,8 +57,8 @@ const Database = new Service(
 
 const system = new Service(
     5,
-    "AgoraDEX",
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quaerat recusandae sint ratione rerum? Deserunt',
+    "BackEnd System Design",
+    'Architecting robust systems to meet your unique business requirements',
     system_img,
     260,
     260

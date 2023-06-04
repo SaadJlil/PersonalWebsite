@@ -156,7 +156,7 @@ function HeaderMain({handleModalOpen}) {
          { id:4, name: 'Adaptability', icon: adaptability, level:'learning' },
          { id:5, name: 'Time Management', icon: timemanagement, level:'confirmed' },
          { id:6, name: 'Attention to detail', icon: attentationtodetail, level:'confirmed' },
-         { id:7, name: 'Continuous Leaning', icon: continuouslearning, level:'advanced' }
+         { id:7, name: 'Continuous Learning', icon: continuouslearning, level:'advanced' }
      ]
 
      const [skills, setskills] = useState(skills_raw);
@@ -292,13 +292,16 @@ function HeaderMain({handleModalOpen}) {
                         )
                         .map(skill => (
                         <div key={skill.id} className={styles.skill}>
-                            <Image
-                                className={styles.techIcon}
-                                src={skill.icon}
-                                width={20}
-                                height={20}
-                                alt={skill.name}
-                            />
+                            <div className={styles.imgWrapper}>
+                                <Image
+                                    className={styles.techIcon}
+                                    src={skill.icon}
+                                    width={20}
+                                    height={20}
+                                    alt={skill.name}
+                                />
+                            </div>
+                            
                             <div className={styles.skilltxt}>
                                 <p className={styles.name}>{skill.name}</p>
                             </div>

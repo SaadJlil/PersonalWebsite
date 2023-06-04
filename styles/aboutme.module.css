@@ -92,6 +92,9 @@
     color: hwb(120 55% 32%);
     font-size: calc(25px + 2vh);
     text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
 }
 
 

@@ -169,6 +169,7 @@
     font-size: 4rem;
     font-style: italic;
     font-family: "Space Grotesk,sans-serif" !important;
+    text-align: center;
 }
 
 .mainTxtSide .heading .saad .work {
@@ -206,7 +207,7 @@
 
 .main .heading {
     width: 100%;
-    height: 70%;
+    height: 75%;
     display: flex;
     flex-direction: column;
     padding: 5%;
@@ -313,6 +314,8 @@
     border: 1px groove rgba(128, 133, 140, 0.138);
     height: 70%;
     width: 210px;
+
+    cursor: default;
 }
 
 .skill p {
@@ -336,9 +339,24 @@
     display: flex;
     flex-direction: column;
     gap: 1px;
+    max-width: 70%;
+}
+
+.skilltxt .name{
+    text-align: center;
+
+}
+
+.imgWrapper {
+    min-width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .techIcon {
+    
     height: 50%;
     width: auto;
     left: 5%;

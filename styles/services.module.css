@@ -51,6 +51,9 @@
 @media (max-width: 400px) {
     .slot{
         width: 90%;
+        background: rgba(0,0,0,0.2);
+        border: 1px groove #f7f7f716;
+        border-radius: 10px;
     }
     
     .slot img{
@@ -58,17 +61,12 @@
     }
    
 
-    .slot{
-        border: 1px groove #f7f7f716;
-        border-radius: 10px;
-
-    }
-
     .slot .slotfade {
         opacity: 1;
     }
   
 }
+
 
 .slot:hover{
     border: 1px groove #f7f7f716;
@@ -127,6 +125,7 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     z-index: 1;
+    cursor: default;
 }
 
 .slot:hover .slotfade {

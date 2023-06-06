@@ -120,10 +120,10 @@ function Profile() {
 function Medias() {
     return (
         <div className={styles.mediaWrapper}>
-            <a className={styles.mediaSlot} target="_blank" href='https://https://github.com/SaadJlil'>
+            <a className={styles.mediaSlot} target="_blank" href='https://github.com/SaadJlil'>
                 <SiGithub  size="60%"/>
             </a>
-            <a className={styles.mediaSlot} target="_blank" href='https://https://www.linkedin.com/in/saad-jlil-0ab6831a9/?originalSubdomain=fr'>
+            <a className={styles.mediaSlot} target="_blank" href='https://www.linkedin.com/in/saad-jlil-0ab6831a9/?originalSubdomain=fr'>
                 <SiLinkedin size="60%"/>
             </a>
             <a className={styles.mediaSlot} href="mailto:sailjlad@gmail.com">

@@ -21,6 +21,25 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.238));
     box-shadow: -4px -3px 25px 11px rgba(0, 0, 0, 0.218);
 }
 
+@media (max-width: 1120px) {
+    .modalContainer {
+      width: 60%
+    }
+}
+
+@media (max-width: 800px) {
+    .modalContainer {
+      width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .modalContainer {
+      width: 100%;
+    }
+}
+
+
 .modalWin {
   margin-top: 10px;
   display: flex;

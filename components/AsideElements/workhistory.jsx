@@ -39,9 +39,17 @@ function Work({isOpen, onClose}) {
 
     if(!isOpen) return null;
 
+    document.addEventListener('mouseup', function(e) {
+        var fullContainer = document.getElementById('workfull');
+        var modelContainer = document.getElementById('workcontainer');
+        if (fullContainer.contains(e.target) && !modelContainer.contains(e.target)) {
+            onClose();
+        }
+    });
+
     return (
-        <div className={styles.WorkFormFull}>
-            <div className={styles.modalContainer}>
+        <div className={styles.WorkFormFull} id={'workfull'}>
+            <div className={styles.modalContainer} id={'workcontainer'}>
                 <div className={styles.modalWin}>
                         <span className={styles.close} onClick={() => onClose()}>
                             &times;

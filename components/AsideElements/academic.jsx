@@ -45,9 +45,17 @@ function Academic({isOpen, onClose}) {
 
     if(!isOpen) return null;
 
+    document.addEventListener('mouseup', function(e) {
+        var fullContainer = document.getElementById('academicfull');
+        var modelContainer = document.getElementById('academiccontainer');
+        if (fullContainer.contains(e.target) && !modelContainer.contains(e.target)) {
+            onClose();
+        }
+    });
+
     return (
-        <div className={styles.AcademicFormFull}>
-            <div className={styles.modalContainer}>
+        <div className={styles.AcademicFormFull} id={'academicfull'}>
+            <div className={styles.modalContainer} id={'academiccontainer'}>
                 <div className={styles.modalWin}>
                         <span className={styles.close} onClick={() => onClose()}>
                             &times;

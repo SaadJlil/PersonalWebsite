@@ -72,7 +72,7 @@
 
 
 .modalform{
-    z-index: 5;
+    z-index: 100;
     color: white;
     top: 0;
     left: 0;

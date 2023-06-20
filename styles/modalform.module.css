@@ -63,7 +63,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.238));
 
 
 .modalform{
-    z-index: 5;
+    z-index: 100;
     color: white;
     top: 0;
     left: 0;

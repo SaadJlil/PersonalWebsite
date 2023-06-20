@@ -39,9 +39,17 @@ function AboutMe({isOpen, onClose}) {
 
     if(!isOpen) return null;
 
+    document.addEventListener('mouseup', function(e) {
+        var fullContainer = document.getElementById('aboutmefull');
+        var modelContainer = document.getElementById('aboutmecontainer');
+        if (fullContainer.contains(e.target) && !modelContainer.contains(e.target)) {
+            onClose();
+        }
+    });
+
     return (
-        <div className={styles.AboutMeFormFull}>
-            <div className={styles.modalContainer}>
+        <div className={styles.AboutMeFormFull} id={'aboutmefull'}>
+            <div className={styles.modalContainer} id='aboutmecontainer'>
                 <div className={styles.modalWin}>
                         <span className={styles.close} onClick={() => onClose()}>
                             &times;

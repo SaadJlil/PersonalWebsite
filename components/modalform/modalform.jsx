@@ -62,11 +62,22 @@ function Modal({handleCloseContent_, handleOpenContent_, isContentOpen, isOpen, 
     const [message, setMessage] = useState("");
 
 
+    //Click outside / close
+    document.addEventListener('mouseup', function(e) {
+        var fullContainer = document.getElementById('modalformfull');
+        var modelContainer = document.getElementById('modalformcontainer');
+        if (fullContainer.contains(e.target) && !modelContainer.contains(e.target)) {
+            onClose();
+            handleOpenContent_();
+        }
+    });
+
+
     if(isContentOpen)
     { 
         return (
-            <div className={styles.modalFormFull}>
-                <div className={styles.modalContainer}>
+            <div className={styles.modalFormFull} id={'modalformfull'}>
+                <div className={styles.modalContainer} id={'modalformcontainer'}>
                     <div className={styles.modalWin}>
                             <span className={styles.close} onClick={() => onClose()}>
                                 &times;
@@ -99,9 +110,14 @@ function Modal({handleCloseContent_, handleOpenContent_, isContentOpen, isOpen, 
         )
     }
 
+    
+
+
+
+
     return (
-        <div className={styles.modalFormFull}>
-            <div className={styles.modalContainer}>
+        <div className={styles.modalFormFull} id={'modalformfull'}>
+            <div className={styles.modalContainer} id={'modalformcontainer'}>
                 <div className={styles.modalWin}>
                         <span className={styles.close} onClick={() => {
                                 onClose();

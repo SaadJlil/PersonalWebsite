@@ -58,7 +58,7 @@ function HeaderMain({handleModalOpen}) {
                         </p>
                     </div>
                     <div className={styles.presentation}>
-                        <p>Welcome to my personal website! My name is Saad, I'm a business analytics student and web developer (Mostly Backend) originally from Morocco, currently based in Canada. I have a passion for coding and enjoy spending my free time playing chess. </p>
+                        <p>Hi there! I'm Saad, a data analytics student and FullStack developer, specializing in backend development. Originally from Morocco, I'm now based in Canada.</p>
                         <div className={styles.hireme} onClick={() => handleModalOpen()}>
                             <p>Hire Me</p>
                         </div>
@@ -92,17 +92,17 @@ function HeaderMain({handleModalOpen}) {
         
         useEffect(() => {
             const handleResize = () => {
-            setWindowDimensions({
-                width: window.innerWidth,
-                height: window.innerHeight
-            });
+                setWindowDimensions({
+                    width: window.innerWidth,
+                    height: window.innerHeight
+                });
             };
         
             window.addEventListener('resize', handleResize);
         
             // Clean up the event listener when the component unmounts
             return () => {
-            window.removeEventListener('resize', handleResize);
+                window.removeEventListener('resize', handleResize);
             };
         }, []);
 

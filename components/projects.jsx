@@ -15,16 +15,18 @@ export default function Projects() {
                         <div className={styles.slotTitle}>
                             <h3>{project.name}</h3>
                         </div>
-                        <div className={styles.imgWrap}>
-                            <Image
-                                className={styles.slotImg}
-                                src={project.img}
-                                alt={project.name}
-                                width={400}
-                                height={200}
-                            />
-                        </div>
-                        <div className={styles.slotText}>
+                            <div className={styles.imgWrap}>
+                                <a href={project.github} className={styles.ImageLinkProjects}>
+                                    <Image
+                                        className={styles.slotImg}
+                                        src={project.img}
+                                        alt={project.name}
+                                        width={400}
+                                        height={200}
+                                    />
+                                </a>
+                            </div>
+                       <div className={styles.slotText}>
                             <p>{project.description}</p>
                         </div>
                         <div className={styles.slotUtils}>

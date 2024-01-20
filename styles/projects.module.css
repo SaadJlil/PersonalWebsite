@@ -117,9 +117,11 @@
 }
 
 .slotText {
+    display: flex; 
     flex-grow: 1;
     padding: 10px;
     border-bottom: 1px solid #f7f7f729;
+    align-items: center;
 }
 
 .slotText p {

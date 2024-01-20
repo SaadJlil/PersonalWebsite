@@ -58,7 +58,7 @@ function HeaderMain({handleModalOpen}) {
                         </p>
                     </div>
                     <div className={styles.presentation}>
-                        <p>Hi there! I'm Saad, a data analytics student and FullStack developer, specializing in backend development. Originally from Morocco, I'm now based in Canada.</p>
+                        <p>Hi there! I'm Saad, a data analytics student and FullStack developer, specializing in backend development. Originally from Morocco, I'm now based in Vancouver, Canada.</p>
                         <div className={styles.hireme} onClick={() => handleModalOpen()}>
                             <p>Hire Me</p>
                         </div>

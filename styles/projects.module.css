@@ -130,6 +130,7 @@
 
 .slotUtils {
     flex: 1;
+    height: 20%;
     padding: 10px 10%;
     background-color: #161620; 
     display: flex;

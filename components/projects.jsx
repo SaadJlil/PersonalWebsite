@@ -15,7 +15,7 @@ export default function Projects() {
                         <div className={styles.slotTitle}>
                             <h3>{project.name}</h3>
                         </div>
-                        <div className={styles.imgWrap}>
+                        <a href={project.github} className={styles.imgWrap} target="_blank" rel="noreferrer">
                             <Image
                                 className={styles.slotImg}
                                 src={project.img}
@@ -23,17 +23,19 @@ export default function Projects() {
                                 width={400}
                                 height={200}
                             />
-                        </div>
+                        </a>
                         <div className={styles.slotText}>
                             <p>{project.description}</p>
                         </div>
                         <div className={styles.slotUtils}>
-                            <div className={styles.slotUtil}>
-                                <span>
-                                    <label className={styles.label}>github: </label>
-                                    <a className={styles.labelText}>{project.github}</a>
-                                </span>
-                            </div>
+                            {/*
+                                <div className={styles.slotUtil}>
+                                    <span>
+                                        <label className={styles.label}>github: </label>
+                                        <a className={styles.labelText}>{project.github}</a>
+                                    </span>
+                                </div>
+                            */}
                             <div className={styles.technos}>
                                 <label className={styles.label}>stack:</label>
                                 {project.technologies.map(technology => (

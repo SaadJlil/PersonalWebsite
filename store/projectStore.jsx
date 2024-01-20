@@ -103,7 +103,7 @@ import docker from '../public/docker.png'
     const agoradex = new Project(
         3,
         "Calib Challenge",
-        'Created accurate direction-of-travel predictions for dashcam videos using PyTorch and deep learning, achieving high accuracy on both labeled and unlabeled videos with 910-pixel focal length.',
+        'Created accurate direction-of-travel predictions for dashcam videos using PyTorch, achieving high accuracy',
         'https://github.com/SaadJlil/calib_challenge',
         [Python, Pytorch],
         agoradexed,

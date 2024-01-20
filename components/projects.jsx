@@ -16,7 +16,7 @@ export default function Projects() {
                             <h3>{project.name}</h3>
                         </div>
                             <div className={styles.imgWrap}>
-                                <a href={project.github} className={styles.ImageLinkProjects}>
+                                <a href={project.github} className={styles.ImageLinkProjects} target="_blank" rel="noreferrer">
                                     <Image
                                         className={styles.slotImg}
                                         src={project.img}

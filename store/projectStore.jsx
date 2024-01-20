@@ -9,6 +9,7 @@ import dotnet from '../public/dotnet.svg'
 import postgres from '../public/postgres.svg'
 import python from '../public/python.svg'
 import pytorch from '../public/pytorch.svg'
+import docker from '../public/docker.png'
 
     class Technology {
         constructor(id, name, icon) {
@@ -24,6 +25,7 @@ import pytorch from '../public/pytorch.svg'
         react,
 
     )
+
 
     const msdotnet = new Technology(
         2,
@@ -46,10 +48,27 @@ import pytorch from '../public/pytorch.svg'
     )  
 
     const Pytorch = new Technology(
-        3,
+        4,
         "Pytorch",
         pytorch,
     )
+
+    const nodejs = new Technology(
+        5,
+        "NodeJs",
+        react,
+
+    )
+
+    const Docker = new Technology(
+        6,
+        "Docker",
+        docker,
+
+    )
+
+
+
 
     class Project {
         constructor(id, name, description, github, technologies, img){
@@ -74,10 +93,10 @@ import pytorch from '../public/pytorch.svg'
 
     const chemistery = new Project(
         2,
-        "Authentication microservice",
-        'Empower your website with a personalized microservice using .NET and PostgreSQL',
-        'https://github.com/SaadJlil/Username-based-authentication-microservice',
-        [msdotnet, postgresql],
+        "HomeCosina",
+        "Open source Recipe/Nutrition platform using a microservice architecture",
+        'https://github.com/SaadJlil/HomeCosina',
+        [nodejs, Docker, postgresql],
         chemistry,
     )
 

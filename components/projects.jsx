@@ -16,26 +16,24 @@ export default function Projects() {
                             <h3>{project.name}</h3>
                         </div>
                         <div className={styles.imgWrap}>
-                                <Image
-                                    className={styles.slotImg}
-                                    src={project.img}
-                                    alt={project.name}
-                                    width={400}
-                                    height={200}
-                                />
+                            <Image
+                                className={styles.slotImg}
+                                src={project.img}
+                                alt={project.name}
+                                width={400}
+                                height={200}
+                            />
                         </div>
-                       <div className={styles.slotText}>
+                        <div className={styles.slotText}>
                             <p>{project.description}</p>
                         </div>
                         <div className={styles.slotUtils}>
-                            {/*
-                                <div className={styles.slotUtil}>
-                                    <span>
-                                        <label className={styles.label}>github: </label>
-                                        <a className={styles.labelText}>{project.github}</a>
-                                    </span>
-                                </div>
-                            */}
+                            <div className={styles.slotUtil}>
+                                <span>
+                                    <label className={styles.label}>github: </label>
+                                    <a className={styles.labelText}>{project.github}</a>
+                                </span>
+                            </div>
                             <div className={styles.technos}>
                                 <label className={styles.label}>stack:</label>
                                 {project.technologies.map(technology => (

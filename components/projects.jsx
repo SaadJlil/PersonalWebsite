@@ -15,7 +15,7 @@ export default function Projects() {
                         <div className={styles.slotTitle}>
                             <h3>{project.name}</h3>
                         </div>
-                            <a href={project.github} className={styles.imgWrap} target="_blank" rel="noreferrer">
+                        <div className={styles.imgWrap}>
                                 <Image
                                     className={styles.slotImg}
                                     src={project.img}
@@ -23,7 +23,7 @@ export default function Projects() {
                                     width={400}
                                     height={200}
                                 />
-                            </a>
+                        </div>
                        <div className={styles.slotText}>
                             <p>{project.description}</p>
                         </div>

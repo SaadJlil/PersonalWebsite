@@ -117,6 +117,7 @@
 }
 
 .slotText {
+    flex-grow: 1;
     padding: 10px;
     border-bottom: 1px solid #f7f7f729;
 }
@@ -126,11 +127,12 @@
     font-size: calc(11px + 0.7vh);
     line-height: 20px;
     color: #f7f7f7b9;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .slotUtils {
-    flex: 1;
-    height: 10px;
+    height: 15%;
     padding: 10px 10%;
     background-color: #161620; 
     display: flex;

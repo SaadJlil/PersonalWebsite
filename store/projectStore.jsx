@@ -1,6 +1,7 @@
 import  {create} from 'zustand'
 
-import chemistry from '../public/projects/microservice.png'
+//import chemistry from '../public/projects/microservice.png'
+import chemistry from '../public/projects/HomeCosinaLogo.png'
 import agoradexed from '../public/projects/calib.png'
 import casatour from '../public/projects/Cephiro.png'
 

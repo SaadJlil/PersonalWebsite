@@ -145,6 +145,15 @@
     gap: 8px;
 }
 
+@media (max-width: 450px) {
+    .slotUtils{
+        height: 20%;
+    }
+}
+
+
+
+
 .technos {
     width: 100%;
     display: flex;

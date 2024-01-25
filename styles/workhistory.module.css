@@ -83,7 +83,7 @@
 
 .modalWin .WinTitle .something{
     color: hwb(120 55% 32%);
-    font-size: calc(25px + 2vh);
+    font-size: calc(1px + 2vh);
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 6px;
@@ -122,7 +122,7 @@
 
 .xp h2{
     color: rgba(237, 248, 235, 0.863);
-    font-size: calc(2px + 0vh);
+    font-size: calc(14px + 1vh);
 }
 
 

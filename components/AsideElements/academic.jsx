@@ -24,21 +24,21 @@ function Academic({isOpen, onClose}) {
 
     const MarocTbs = new AsideStoredElement(
         1,
-        "Bachelor in management (General)",
-        "2019 - 2020",
-        'Toulouse Business School (Casablanca, Morocco)',
+        "Post graduate degree in Data Analytics",
+        "2024",
+        'Douglas College (Vancouver, BC, Canada)',
     )
     const Toulouse = new AsideStoredElement(
-        2,
-        "Bachelor in mamagement (3 semester exchange) specialisation in data analysis",
-        "2020-2022",
-        'Toulouse Business School (Toulouse , France/Barcelona, Spain)'
+        1,
+        "Post graduate degree in Business Analytics",
+        "2023",
+        'Niagara College (NOTL, Ontario, Canada)'
     )
     const Canada = new AsideStoredElement(
-        3,
-        "graduate degree in business analytics",
-        "Enrolled",
-        'Niagara College (Niagara On-The-Lake,Canada)'
+        1,
+        "DEC - Diplôme d'études collégiales techniques",
+        "2019-2021",
+        "Université Internationale de Casablanca"
     )
 
     const academicExp = [MarocTbs, Toulouse, Canada]

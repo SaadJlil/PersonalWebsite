@@ -54,7 +54,7 @@ function HeaderMain({handleModalOpen}) {
                     <div className={styles.saad}>
                         <p>Hi, my name is 
                             <br /><span className={styles.name}>Saad JLIL</span>    
-                            <br /><span className={styles.work}>Backend Developer.</span>    
+                            <br /><span className={styles.work}>Full-Stack Developer.</span>    
                         </p>
                     </div>
                     <div className={styles.presentation}>
